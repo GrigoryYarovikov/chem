@@ -1,0 +1,17 @@
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\database.dll.config
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\database.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\database.pdb
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\EntityFramework.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\EntityFramework.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.csprojResolveAssemblyReference.cache
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.pdb
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.Migrations.initial.resources
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.csproj.GenerateResource.Cache
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.Migrations.categoryFix.resources

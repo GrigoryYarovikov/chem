@@ -1,0 +1,16 @@
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\obj\Debug\tmp.ModelsTester.csprojResolveAssemblyReference.cache
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\tmp.ModelsTester.exe.config
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\tmp.ModelsTester.exe
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\tmp.ModelsTester.pdb
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\database.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\EntityFramework.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\database.pdb
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\EntityFramework.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\obj\Debug\tmp.ModelsTester.exe
+c:\Users\YGV\documents\visual studio 2013\Projects\chem\tmp.ModelsTester\obj\Debug\tmp.ModelsTester.pdb
