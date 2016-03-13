@@ -18,17 +18,37 @@ namespace Spider
             _uri = new Uri(uri);
         }
 
-        public CrawlResult Crawl()
+        public BaseSpider()
+        {
+        }
+
+        public virtual string  Crawl()
+        {            
+            var crawler = GetCrawler();
+
+            var result =  crawler.Crawl(_uri);
+
+            if (result.ErrorOccurred)
+            {
+                return String.Format("Crawl of {0} completed with error: {1}",
+                    result.RootUri.AbsoluteUri,
+                    result.ErrorException.Message);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        protected PoliteWebCrawler GetCrawler()
         {
             var crawler = new PoliteWebCrawler();
             crawler.PageCrawlStartingAsync += crawler_ProcessPageCrawlStarting;
             crawler.PageCrawlCompletedAsync += crawler_ProcessPageCrawlCompleted;
             crawler.PageCrawlDisallowedAsync += crawler_PageCrawlDisallowed;
             crawler.PageLinksCrawlDisallowedAsync += crawler_PageLinksCrawlDisallowed;
-
             crawler = SetRules(crawler);
-
-            return crawler.Crawl(_uri);
+            return crawler;
         }
 
         protected virtual void crawler_ProcessPageCrawlStarting(object sender, PageCrawlStartingArgs e)

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChemContext.cs" />
+    <Compile Include="DataManagers\ElementManager.cs" />
     <Compile Include="Migrations\201603081335318_initial.cs" />
     <Compile Include="Migrations\201603081335318_initial.Designer.cs">
       <DependentUpon>201603081335318_initial.cs</DependentUpon>

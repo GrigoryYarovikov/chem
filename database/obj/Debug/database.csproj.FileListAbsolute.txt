@@ -15,3 +15,20 @@ c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\bin\Debug\Micro
 c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.Migrations.initial.resources
 c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.csproj.GenerateResource.Cache
 c:\Users\YGV\documents\visual studio 2013\Projects\chem\database\obj\Debug\database.Migrations.categoryFix.resources
+C:\STW\chem\database\bin\Debug\database.dll.config
+C:\STW\chem\database\bin\Debug\database.dll
+C:\STW\chem\database\bin\Debug\database.pdb
+C:\STW\chem\database\bin\Debug\EntityFramework.dll
+C:\STW\chem\database\bin\Debug\EntityFramework.SqlServer.dll
+C:\STW\chem\database\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\STW\chem\database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\STW\chem\database\bin\Debug\EntityFramework.xml
+C:\STW\chem\database\bin\Debug\EntityFramework.SqlServer.xml
+C:\STW\chem\database\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\STW\chem\database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\STW\chem\database\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\STW\chem\database\obj\Debug\database.Migrations.initial.resources
+C:\STW\chem\database\obj\Debug\database.Migrations.categoryFix.resources
+C:\STW\chem\database\obj\Debug\Database.csproj.GenerateResource.Cache
+C:\STW\chem\database\obj\Debug\database.dll
+C:\STW\chem\database\obj\Debug\database.pdb

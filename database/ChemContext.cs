@@ -11,7 +11,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Chem.DataContext
 {
-    public class ChemContext : IdentityDbContext<ApplicationUser>
+    public class ChemContext : IdentityDbContext<ApplicationUser>, IDisposable
     {
         DbSet<Element> Elements { get; set; }
         DbSet<Category> Categories { get; set; }
@@ -68,6 +68,11 @@ namespace Chem.DataContext
             modelBuilder.Entity<Substance>().HasMany(x => x.Names);
             modelBuilder.Entity<Substance>().HasMany(x => x.Scheme);
             modelBuilder.Entity<Category>().HasMany(x => x.Parents).WithMany();
+        }
+
+        public void Dispose()
+        {
+            base.Dispose();
         }
     }
 }
