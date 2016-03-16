@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Chem.Managers
 {
-    class SubstanceManager
+    public class SubstanceManager
     {
         ChemContext _context;
 
@@ -19,7 +19,7 @@ namespace Chem.Managers
             _context = new ChemContext();
         }
 
-        public void AddSubstances(IEnumerable<Substance> substances)
+        public void AddMany(IEnumerable<Substance> substances)
         {
             _context.Set<Substance>().AddRange(substances);
             _context.SaveChanges();

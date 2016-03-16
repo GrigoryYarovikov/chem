@@ -16,7 +16,7 @@ namespace Spider
     {
         static void Main(string[] args)
         {
-            var spider = new MendeleevSpider();
+            var spider = new CharChemSpider();
             var result = spider.Crawl();
             if (result != null)
             {
@@ -24,7 +24,7 @@ namespace Spider
             }
             else
             {
-                Console.WriteLine("Mendeleev crawl success");
+                Console.WriteLine("CHCH crawl success");
             }
 
 //            var html = @"<h3>

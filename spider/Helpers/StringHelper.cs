@@ -20,6 +20,11 @@ namespace Spider.Helpers
             return i;
         }
 
+        static public string CutStar(this string s)
+        {
+            return s.Trim().Trim('*');;
+        }
+
         static public double ToMassNumber(this string s)
         {
             var i = .0;

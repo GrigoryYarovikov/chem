@@ -35,7 +35,7 @@ namespace Spider
             var result = crawler.Crawl(uri, cToken);
 
             var elements = crawler.CrawlBag.elements as ConcurrentBag<Element>;
-            _manager.AddElements(elements.ToList());
+            _manager.AddMany(elements.ToList());
 
             if (result.ErrorOccurred)
             {

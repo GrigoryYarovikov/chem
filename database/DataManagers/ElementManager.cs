@@ -17,7 +17,7 @@ namespace Chem.Managers
             _context = new ChemContext();
         }
 
-        public void AddElements(IEnumerable<Element> elements)
+        public void AddMany(IEnumerable<Element> elements)
         {
             _context.Set<Element>().AddRange(elements);
             _context.SaveChanges();
