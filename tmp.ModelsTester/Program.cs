@@ -48,12 +48,12 @@ namespace tmp.ModelsTester
         {
             using (var context = ChemContext.Create())
             {
-                var categories = context.Set<Category>().Include(x => x.Parents).ToList();
-                //var substancies = context.Set<Substance>()
-                //    .Include(x => x.Names)
-                //    .Include(x => x.Scheme)
-                //    .Include(x => x.Categories)
-                //    .Include(x => x.Categories.Select(y => y.Parents));
+               // var categories = context.Set<Category>().Include(x => x.Parents).ToList();
+                var substancies = context.Set<Substance>()
+                    .Include(x => x.Names)
+                    .Include(x => x.Scheme)
+                    .Include(x => x.Categories)
+                    .Include(x => x.Categories.Select(y => y.Parents)).OrderBy(x => new Guid()).Take(50).ToArray();
             }
         }
 

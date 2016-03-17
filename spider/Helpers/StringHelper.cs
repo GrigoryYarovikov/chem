@@ -44,5 +44,10 @@ namespace Spider.Helpers
             }).Where(x => x != ' ').ToArray();
             return new String(cArr);
         }
+
+        static public bool HasValue(this string s)
+        {
+            return String.IsNullOrEmpty(s);
+        }
     }
 }

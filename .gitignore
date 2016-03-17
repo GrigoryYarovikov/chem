@@ -1,3 +1,9 @@
 packages/
 spider/bin/
 spider/obj/
+chem/obj/
+chem/bin/
+database/bin/
+database/obj/
+tmp.ModelsTester/bin/
+tmp.ModelsTester/obj/

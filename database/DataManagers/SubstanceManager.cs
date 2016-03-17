@@ -18,6 +18,15 @@ namespace Chem.Managers
         {
             _context = new ChemContext();
         }
+        public SubstanceManager(DbContext context)
+        {
+            _context = context as ChemContext;
+        }
+
+        public DbContext GetContext()
+        {
+            return _context;
+        }
 
         public void AddMany(IEnumerable<Substance> substances)
         {
@@ -25,7 +34,7 @@ namespace Chem.Managers
             _context.SaveChanges();
         }
 
-        public IEnumerable<Substance> GetSubstances()
+        public IEnumerable<Substance> GetAll()
         {
             return _context.Set<Substance>()
                     .Include(x => x.Names)
@@ -34,7 +43,7 @@ namespace Chem.Managers
                     .Include(x => x.Categories.Select(y => y.Parents));
         }
 
-        public Substance GetSubstanceById(int id)
+        public Substance GetById(int id)
         {
             return _context.Set<Substance>()
                     .Include(x => x.Names)
@@ -44,7 +53,7 @@ namespace Chem.Managers
                     .FirstOrDefault(x => x.Id == id);
         }
 
-        public IEnumerable<Substance> GetSubstancesByName(string name)
+        public IEnumerable<Substance> GetByName(string name)
         {
             name = name.ToLower();
             return _context.Set<Substance>()
@@ -57,7 +66,7 @@ namespace Chem.Managers
                         ));
         }
 
-        public IEnumerable<Substance> GetSubstancesByFormula(string formula)
+        public IEnumerable<Substance> GetByFormula(string formula)
         {
             return _context.Set<Substance>()
                     .Include(x => x.Names)

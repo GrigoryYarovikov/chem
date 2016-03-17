@@ -74,13 +74,13 @@ namespace Spider
         protected virtual void crawler_PageLinksCrawlDisallowed(object sender, PageLinksCrawlDisallowedArgs e)
         {
             var crawledPage = e.CrawledPage;
-            Console.WriteLine("Did not crawl the links on page {0} due to {1}", crawledPage.Uri.AbsoluteUri, e.DisallowedReason);
+            //Console.WriteLine("Did not crawl the links on page {0} due to {1}", crawledPage.Uri.AbsoluteUri, e.DisallowedReason);
         }
 
         protected virtual void crawler_PageCrawlDisallowed(object sender, PageCrawlDisallowedArgs e)
         {
             var pageToCrawl = e.PageToCrawl;
-            Console.WriteLine("Did not crawl page {0} due to {1}", pageToCrawl.Uri.AbsoluteUri, e.DisallowedReason);
+           // Console.WriteLine("Did not crawl page {0} due to {1}", pageToCrawl.Uri.AbsoluteUri, e.DisallowedReason);
         }
 
         protected virtual PoliteWebCrawler SetRules(PoliteWebCrawler crawler) 

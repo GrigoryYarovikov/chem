@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace Spider
 {
-    class SpiderSubstance
+    class SpiderSubstance : IComparable
     {
         public string[] Names { get; set; }
         public string[] Formulas { get; set; }
         public string[] Categories { get; set; }
         public string CAS { get; set; }
         public string BruttoFormula { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            var other = (obj as SpiderSubstance);
+            return this.CAS.CompareTo(other.CAS);
+        }
     }
 }

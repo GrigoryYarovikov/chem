@@ -16,33 +16,37 @@ using System.Text.RegularExpressions;
 
 namespace Spider
 {
-    class CharChemCategorySpider : BaseSpider
+    class ChemIndexSpider : BaseSpider
     {
-        CategoryManager _categories;
+        SubstanceManager _substances;
 
-        public CharChemCategorySpider()
+        public ChemIndexSpider()
         {
-            _categories = new CategoryManager();
+            _substances = new SubstanceManager();
         }
 
         public override string Crawl()
         {
-            
             string ans = "";
 
-            var catList = new List<SpiderCategory>();
+            var catList = new List<SpiderSubstanceCI>();
 
-            var addr = "http://easychem.org/ru/subst-ref/?cat0=";
-            for (int i = 1; i < 129; ++i)
+            var addr = "http://www.chemindex.com/";
+
+            foreach (var substance in _substances.GetAll())
             {
+                if (!substance.CAS.HasValue())
+                    continue;
+
                 var crawler = GetCrawler();
-                var uri = new Uri(addr + i);
+
+                var uri = new Uri(addr + substance.CAS + "-cas.html");
                 var cToken = new CancellationTokenSource();
 
-                crawler.CrawlBag.elements = new ConcurrentBag<SpiderCategory>();
+                crawler.CrawlBag.elements = new ConcurrentBag<SpiderSubstanceCI>();
                 var result = crawler.Crawl(uri, cToken);
 
-                var element = (crawler.CrawlBag.elements as ConcurrentBag<SpiderCategory>).First();
+                var element = (crawler.CrawlBag.elements as ConcurrentBag<SpiderSubstanceCI>).First();
                 if (element.Name.Length == 0)
                     element.Name = "sas";
                 element.CatId = i;
@@ -89,15 +93,13 @@ namespace Spider
                 return;
             }
 
-            var element = ParseCategory(crawledPage.Content.Text);
-            //var elemList = ParseCategory(crawledPage.Content.Text);
-            (e.CrawlContext.CrawlBag.elements as ConcurrentBag<SpiderCategory>).Add(element);
-                //(e.CrawlContext.CrawlBag.elements as ConcurrentBag<Substance>).Add(item);
+            var element = ParsePage(crawledPage.Content.Text);
+            (e.CrawlContext.CrawlBag.elements as ConcurrentBag<SpiderSubstanceCI>).Add(element);
 
             e.CrawlContext.CancellationTokenSource.Cancel();
         }
 
-        SpiderCategory ParseCategory(string page)
+        SpiderSubstanceCI ParsePage(string page)
         {
             CQ dom = page;
             var items = dom[".subst-cat-owners-box"];
@@ -106,9 +108,9 @@ namespace Spider
                 var elem = items.Select(x =>
                 {
                     CQ elemDom = x.InnerHTML;
-                    return new SpiderCategory
+                    return new SpiderSubstanceCI
                     {
-                        Name = elemDom["b"].First().Text().CutStar(),
+                        Name = elemDom["b:contains('test')"].First().Text().CutStar(),
                         Parents = elemDom["a"].Elements.Select(y => y.InnerText.HtmlDecode().CutStar()).ToList()
                     };
                 }).Aggregate((first, second) => { first.Parents.AddRange(second.Parents); return first; });
@@ -117,26 +119,12 @@ namespace Spider
             else
             {
                 items = dom["h1"];
-                var elem = new SpiderCategory
+                var elem = new SpiderSubstanceCI
                 {
                     Name = items.First().Text().Split(',').First().CutStar()
                 };
                 return elem;
             }
-        }
-
-        protected override PoliteWebCrawler SetRules(PoliteWebCrawler crawler)
-        {
-            crawler.ShouldCrawlPage((pageToCrawl, crawlContext) =>
-            {
-                Regex regex = new Regex(@"http:\/\/easychem\.org\/ru\/subst-ref\/\?cat0=.+");
-                if (!regex.IsMatch(pageToCrawl.Uri.AbsoluteUri))
-                    return new CrawlDecision { Allow = false, Reason = "Нужно парсить только списки выдачи" };
-
-                return new CrawlDecision { Allow = true };
-            });
-
-            return crawler;
         }
     }
 }

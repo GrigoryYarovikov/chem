@@ -13,6 +13,7 @@ using Chem.Models;
 using Spider.Helpers;
 using Chem.Managers;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Spider
 {
@@ -24,31 +25,32 @@ namespace Spider
         public CharChemSubstSpider()
         {
             _substances = new SubstanceManager();
-            _categories = new CategoryManager();
+            _categories = new CategoryManager(_substances.GetContext());
         }
 
         public override string Crawl()
         {
+            var timer = new Stopwatch();
+            timer.Start();
 
             string ans = "";
 
-            var catList = new List<SpiderCategory>();
-
+            var substSet = new SortedSet<SpiderSubstance>();
+          
             var addr = "http://easychem.org/ru/subst-ref/?cat0=";
             for (int i = 1; i < 129; ++i)
             {
                 var crawler = GetCrawler();
-                var uri = new Uri(addr + i);
+                var uri = new Uri(addr + i + "&pg=1");
                 var cToken = new CancellationTokenSource();
 
-                crawler.CrawlBag.elements = new ConcurrentBag<SpiderCategory>();
+                crawler.CrawlBag.elements = new ConcurrentBag<SpiderSubstance>();
                 var result = crawler.Crawl(uri, cToken);
 
-                var element = (crawler.CrawlBag.elements as ConcurrentBag<SpiderCategory>).First();
-                if (element.Name.Length == 0)
-                    element.Name = "sas";
-                element.CatId = i;
-                catList.Add(element);
+                var elements = (crawler.CrawlBag.elements as ConcurrentBag<SpiderSubstance>);
+                
+                foreach (var item in elements)
+                    substSet.Add(item);
 
                 if (result.ErrorOccurred)
                 {
@@ -57,22 +59,22 @@ namespace Spider
                         result.ErrorException.Message);
                 }
             }
-            var trueCatList = new List<Category>();
-            foreach (var item in catList)
-            {
-                trueCatList.Add(new Category
+            var trueSubstList = substSet.Select(x => 
                 {
-                    Name = item.Name
+                    return new Substance
+                    {
+                        CAS = x.CAS,
+                        Formula = x.BruttoFormula,
+                        Names = x.Names.Select(n => { return new SubstanceName(n); }).ToList(),
+                        Scheme = x.Formulas.Select(f => { return new SubstanceScheme(f); }).ToList(),
+                        Categories = x.Categories.Select(c => { 
+                            return _categories.GetAll().FirstOrDefault(z => z.Name == c); 
+                        }).Where(v => v != null).ToList()
+                    };
                 });
-            }
-            foreach (var item in catList)
-            {
-                var cat = trueCatList.First(x => x.Name == item.Name);
-                if (item.Parents != null)
-                    cat.Parents = trueCatList.Where(x => item.Parents.Contains(x.Name)).ToList();
-            }
 
-            //_categories.AddMany(trueCatList);
+            _substances.AddMany(trueSubstList);
+            Console.WriteLine(String.Format("Time elapsed : {0}, elements found: {1}", timer.Elapsed.TotalMinutes, substSet.Count));
             return ans;
         }
 
@@ -101,28 +103,31 @@ namespace Spider
         IEnumerable<SpiderSubstance> ParseSubstance(string page)
         {
             CQ dom = page;
-            var cat = dom["h1"].First().Text().Split(',').First().CutStar();
             var items = dom["div[itemscope]"];
-            var elem = items.Select(x =>
+            if (items.Length != 0)
             {
-                CQ elemDom = x.InnerHTML;
-                return new SpiderSubstance
+                var elem = items.Select(x =>
                 {
-                    Names = elemDom[".names dl span"].Elements.Select(y => y.InnerText.HtmlDecode().CutStar()).ToArray(),
-                    Categories = elemDom[".categ a"].Elements.Select(y => y.InnerText.HtmlDecode().CutStar()).ToArray(),
-                    BruttoFormula = elemDom[".subst-brutto a"].First().Text(),
-                    CAS = elemDom[".cas-rn"].First().Text(),
-                    Formulas = elemDom[".formula-text"].Elements.Select(y => y.InnerText).ToArray()
-                };
-            });
-            return elem;
+                    CQ elemDom = x.InnerHTML;
+                    return new SpiderSubstance
+                    {
+                        Names = elemDom[".names dl span"].Elements.Select(y => y.InnerText.HtmlDecode().CutStar()).ToArray(),
+                        Categories = elemDom[".categ a"].Elements.Select(y => y.InnerText.HtmlDecode().CutStar()).ToArray(),
+                        BruttoFormula = elemDom[".subst-brutto"].First().Text(),
+                        CAS = elemDom[".cas-rn"].First().Text(),
+                        Formulas = elemDom[".formula-text"].Elements.Select(y => y.InnerText).ToArray()
+                    };
+                });
+                return elem;
+            }
+            return new List<SpiderSubstance>();
         }
 
         protected override PoliteWebCrawler SetRules(PoliteWebCrawler crawler)
         {
             crawler.ShouldCrawlPage((pageToCrawl, crawlContext) =>
             {
-                Regex regex = new Regex(@"http:\/\/easychem\.org\/ru\/subst-ref\/\?cat0=.+");
+                Regex regex = new Regex(@"http:\/\/easychem\.org\/ru\/subst-ref\/\?cat0=\d+&pg=\d");
                 if (!regex.IsMatch(pageToCrawl.Uri.AbsoluteUri))
                     return new CrawlDecision { Allow = false, Reason = "Нужно парсить только списки выдачи" };
 

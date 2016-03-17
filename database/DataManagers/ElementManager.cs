@@ -2,6 +2,7 @@
 using Chem.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,18 +18,28 @@ namespace Chem.Managers
             _context = new ChemContext();
         }
 
+        public ElementManager(DbContext context)
+        {
+            _context = context as ChemContext;
+        }
+
+        public DbContext GetContext()
+        {
+            return _context;
+        }
+
         public void AddMany(IEnumerable<Element> elements)
         {
             _context.Set<Element>().AddRange(elements);
             _context.SaveChanges();
         }
 
-        public IEnumerable<Element> GetElements()
+        public IEnumerable<Element> GetAll()
         {
             return _context.Set<Element>();
         }
 
-        public Element GetElementBySign(string sign)
+        public Element GetBySign(string sign)
         {
             return _context.Set<Element>().FirstOrDefault(x => x.Sign == sign);
         }

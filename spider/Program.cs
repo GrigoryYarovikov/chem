@@ -16,7 +16,7 @@ namespace Spider
     {
         static void Main(string[] args)
         {
-            var spider = new CharChemSpider();
+            var spider = new CharChemSubstSpider();
             var result = spider.Crawl();
             if (result != null)
             {

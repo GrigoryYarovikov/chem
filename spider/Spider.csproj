@@ -85,9 +85,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpiderModels\SpiderCategory.cs" />
     <Compile Include="SpiderModels\SpiderSubstance.cs" />
+    <Compile Include="SpiderModels\SpiderSubstanceCI.cs" />
     <Compile Include="SpiderNest\BaseSpider.cs" />
     <Compile Include="SpiderNest\CharChemCategorySpider.cs" />
     <Compile Include="SpiderNest\CharChemSubstSpider.cs" />
+    <Compile Include="SpiderNest\ChemIndexSpider.cs" />
     <Compile Include="SpiderNest\MendeleevSpider.cs" />
   </ItemGroup>
   <ItemGroup>
