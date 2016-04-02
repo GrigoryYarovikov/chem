@@ -12,7 +12,7 @@ namespace Chem.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            return View();
+            return File("index.html", "text/html");
         }
     }
 }

@@ -13,5 +13,26 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 800px;
+}
+
+.center {
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.home_search-form {
+    width: 400px;
+}
+
+.search-field {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.content-wrap {
+    display: inline-block;
 }

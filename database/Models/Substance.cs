@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chem.Models
 {
-    public class Substance
+    public class Substance: IComparable
     {
         public int Id { get; set; }
         public virtual List<SubstanceName> Names { get; set; }
@@ -22,5 +22,11 @@ namespace Chem.Models
         public bool? WaterSolubility { get; set; }
         public string HazardSymbols { get; set; }
         public string CAS { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            var other = (obj as Substance);
+            return (CAS + Formula).CompareTo(other.CAS + other.Formula);
+        }
     }
 }

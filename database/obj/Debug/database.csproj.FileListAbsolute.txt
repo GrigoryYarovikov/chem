@@ -26,7 +26,6 @@ C:\STW\chem\database\bin\Debug\EntityFramework.xml
 C:\STW\chem\database\bin\Debug\EntityFramework.SqlServer.xml
 C:\STW\chem\database\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\STW\chem\database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\STW\chem\database\obj\Debug\Database.csprojResolveAssemblyReference.cache
 C:\STW\chem\database\obj\Debug\database.Migrations.initial.resources
 C:\STW\chem\database\obj\Debug\database.Migrations.categoryFix.resources
 C:\STW\chem\database\obj\Debug\Database.csproj.GenerateResource.Cache

@@ -53,8 +53,8 @@ namespace Spider
 
         protected virtual void crawler_ProcessPageCrawlStarting(object sender, PageCrawlStartingArgs e)
         {
-            var pageToCrawl = e.PageToCrawl;
-            Console.WriteLine("About to crawl link {0} which was found on page {1}", pageToCrawl.Uri.AbsoluteUri, pageToCrawl.ParentUri.AbsoluteUri);
+            //var pageToCrawl = e.PageToCrawl;
+            //Console.WriteLine("About to crawl link {0} which was found on page {1}", pageToCrawl.Uri.AbsoluteUri, pageToCrawl.ParentUri.AbsoluteUri);
         }
 
         protected virtual void crawler_ProcessPageCrawlCompleted(object sender, PageCrawlCompletedArgs e)
@@ -62,9 +62,9 @@ namespace Spider
             var crawledPage = e.CrawledPage;
 
             if (crawledPage.WebException != null || crawledPage.HttpWebResponse.StatusCode != HttpStatusCode.OK)
-                Console.WriteLine("Crawl of page failed {0}", crawledPage.Uri.AbsoluteUri);
+                Console.WriteLine("Failed {0}", crawledPage.Uri.AbsoluteUri);
             else
-                Console.WriteLine("Crawl of page succeeded {0}", crawledPage.Uri.AbsoluteUri);
+                Console.WriteLine("Succeeded {0}", crawledPage.Uri.AbsoluteUri);
 
             if (string.IsNullOrEmpty(crawledPage.Content.Text))
                 Console.WriteLine("Page had no content {0}", crawledPage.Uri.AbsoluteUri);
@@ -73,13 +73,13 @@ namespace Spider
 
         protected virtual void crawler_PageLinksCrawlDisallowed(object sender, PageLinksCrawlDisallowedArgs e)
         {
-            var crawledPage = e.CrawledPage;
+            //var crawledPage = e.CrawledPage;
             //Console.WriteLine("Did not crawl the links on page {0} due to {1}", crawledPage.Uri.AbsoluteUri, e.DisallowedReason);
         }
 
         protected virtual void crawler_PageCrawlDisallowed(object sender, PageCrawlDisallowedArgs e)
         {
-            var pageToCrawl = e.PageToCrawl;
+            //var pageToCrawl = e.PageToCrawl;
            // Console.WriteLine("Did not crawl page {0} due to {1}", pageToCrawl.Uri.AbsoluteUri, e.DisallowedReason);
         }
 

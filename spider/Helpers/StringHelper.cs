@@ -47,7 +47,7 @@ namespace Spider.Helpers
 
         static public bool HasValue(this string s)
         {
-            return String.IsNullOrEmpty(s);
+            return !String.IsNullOrEmpty(s);
         }
     }
 }

@@ -5,8 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Linq;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace tmp.ModelsTester
@@ -15,9 +17,12 @@ namespace tmp.ModelsTester
     {
         static void Main(string[] args)
         {
+            //var patt = new Regex(@"^([+-]?)(?=\d|\.\d)\d*(\.\d*)?([Ee]([+-]?\d+))?");
+            //var number = patt.Match("333.8°C at 760 mmHg");
+            //var ttt = Double.Parse("2.55E-05", CultureInfo.InvariantCulture);
             //AddData();
-            GetData();
-            //Clear();
+            //GetData();
+            Clear();
         }
 
         static void AddData()
@@ -53,7 +58,11 @@ namespace tmp.ModelsTester
                     .Include(x => x.Names)
                     .Include(x => x.Scheme)
                     .Include(x => x.Categories)
-                    .Include(x => x.Categories.Select(y => y.Parents)).OrderBy(x => new Guid()).Take(50).ToArray();
+                    .Include(x => x.Categories.Select(y => y.Parents)).FirstOrDefault(x => x.Names.Any(n => n.Value == "Хлорид кальция"));
+                if (substancies != null)
+                    Console.WriteLine(substancies.Formula + " " + substancies.CAS);
+                else
+                    Console.WriteLine("nety$");
             }
         }
 
@@ -71,10 +80,16 @@ namespace tmp.ModelsTester
         {
             using (var context = ChemContext.Create())
             {
-                foreach (var entity in context.Set<Category>())
-                    context.Set<Category>().Remove(entity);
+                //foreach (var entity in context.Set<Category>())
+                //    context.Set<Category>().Remove(entity);
+                foreach (var name in context.Set<SubstanceName>())
+                    context.Set<SubstanceName>().Remove(name);
+                foreach (var scheme in context.Set<SubstanceScheme>())
+                    context.Set<SubstanceScheme>().Remove(scheme);
                 foreach (var entity in context.Set<Substance>())
+                {
                     context.Set<Substance>().Remove(entity);
+                }
 
                 context.SaveChanges();
             }

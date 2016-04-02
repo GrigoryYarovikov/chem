@@ -17,7 +17,7 @@ namespace Spider
         public int CompareTo(object obj)
         {
             var other = (obj as SpiderSubstance);
-            return this.CAS.CompareTo(other.CAS);
+            return (CAS + BruttoFormula).CompareTo(other.CAS + other.BruttoFormula);
         }
     }
 }

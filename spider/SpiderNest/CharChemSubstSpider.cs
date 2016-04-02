@@ -59,7 +59,14 @@ namespace Spider
                         result.ErrorException.Message);
                 }
             }
-            var trueSubstList = substSet.Select(x => 
+
+            Console.WriteLine(String.Format("Time elapsed : {0}, PARSED", timer.Elapsed.TotalMinutes));
+
+            var contextSet = new SortedSet<Substance>( _substances.GetAll());
+           
+            Console.WriteLine(String.Format("Time elapsed : {0}, SET_CREATED", timer.Elapsed.TotalMinutes));
+           
+            var trueSubstList = substSet.Select(x =>
                 {
                     return new Substance
                     {
@@ -67,14 +74,24 @@ namespace Spider
                         Formula = x.BruttoFormula,
                         Names = x.Names.Select(n => { return new SubstanceName(n); }).ToList(),
                         Scheme = x.Formulas.Select(f => { return new SubstanceScheme(f); }).ToList(),
-                        Categories = x.Categories.Select(c => { 
-                            return _categories.GetAll().FirstOrDefault(z => z.Name == c); 
+                        Categories = x.Categories.Select(c =>
+                        {
+                            return _categories.GetAll().FirstOrDefault(z => z.Name == c);
                         }).Where(v => v != null).ToList()
                     };
                 });
 
-            _substances.AddMany(trueSubstList);
-            Console.WriteLine(String.Format("Time elapsed : {0}, elements found: {1}", timer.Elapsed.TotalMinutes, substSet.Count));
+            Console.WriteLine(String.Format("Time elapsed : {0}, TRUE_LIST_Q", timer.Elapsed.TotalMinutes));
+            var listToAdd = new List<Substance>();
+            foreach (var item in trueSubstList)
+            {
+                if (contextSet.Add(item))
+                    listToAdd.Add(item);
+            }
+            Console.WriteLine(String.Format("Time elapsed : {0}, ALL_ADD", timer.Elapsed.TotalMinutes));
+
+            _substances.AddMany(listToAdd);
+            Console.WriteLine(String.Format("Time elapsed : {0}, elements found: {1}", timer.Elapsed.TotalMinutes, listToAdd.Count()));
             return ans;
         }
 
