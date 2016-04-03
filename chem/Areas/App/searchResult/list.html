@@ -1,4 +1,51 @@
 ﻿<div>
-    <h1>MAmkE PRIVET</h1>
-    <a href="/test">test</a>
+    <h1>Список результатов по запросу "{{q}}"</h1>
+    <div data-ng-show="isLoaded && !!currentPageList && currentPageList.length" class="search_result-table">
+        <div data-ng-repeat=" substance in currentPageList">
+            <p><h3>{{$index + 1 + pageSize * (currentPage - 1)}}: <a href="/substance/{{substance.Id}}">{{substance.Name}}</a></h3></p>
+            <table cellpadding="0" cellspacing="0" class="bordered" border="1">
+                <tr>
+                    <td class="table_cell-title">Брутто-формула:</td>
+                    <td class="table_cell-value">{{substance.Formula}}</td>
+                    <td rowspan="3" class="table_cell-img">
+                        <span class="easyChemConfig auto-compile"></span>
+                        <div class="echem-formula">
+                            {{substance.Scheme}}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_cell-title">Названия:</td>
+                    <td class="table_cell-value">
+                        <a data-ng-repeat="name in substance.Synonyms">
+                            {{name}};
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_cell-title">Категории:</td>
+                    <td class="table_cell-value">
+                        <a data-ng-repeat="category in substance.Categories">
+                            {{category}};
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="well">
+            <div paging
+                 page="currentPage"
+                 page-size="pageSize"
+                 total="total"
+                 paging-action="doCtrlPagingAct('Paging Clicked', page, pageSize, total)"
+                 hide-if-empty="true">
+            </div>
+        </div>
+    </div>
+    <div data-ng-show="isLoaded && (!currentPageList || !currentPageList.length)">
+        К сожалению, по запросу ничего не найдено. Проверьте правильность запроса или воспользуйтесь <a href="/specialSearch">расширенным поиском</a>
+    </div>
+    <div data-ng-show="!isLoaded">
+        Загрузка результатов...
+    </div>
 </div>

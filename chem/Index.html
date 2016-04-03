@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <base href="/">
     <title>{{title}}</title>
-    <!--<link rel="stylesheet" href="Content/themes/semantic/semantic.css" />
-    <link rel="stylesheet" href="Content/themes/ng-table/ng-table.css" />-->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/easychem.css"/>
     <link rel="stylesheet" href="Content/Site.css" />
-    <!--<link rel="stylesheet" href="Content/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" href="Content/themes/select2/select2.css" />-->
 </head>
 <body>
     <div>
-
         <div class="menu-container"></div>
         <section id="main" style="height:90%;">
             <div data-ng-view ng-animate>
@@ -29,10 +26,15 @@
     <script src="/Scripts/libs/semantic/semantic.js"></script>
     <script src="/Scripts/libs/ng-table/ng-table.js"></script>
     <script src="/Scripts/config.js"></script>-->
-    <!--<script src="/Scripts/app/ngscripts.js"></script>-->
+    <!--<script type="text/javascript" src="http://easychem.org/download/easychem.js"></script>-->
+    <script src="Scripts/paging.js"></script>
+    <script src="/Scripts/easychem.js"></script>
+    <script src="/Scripts/site/comonScripts.js"></script>
     <script src="/Areas/App/app.js"></script>
+    <script src="/Areas/App/services/substanceService.js"></script>
     <script src="/Areas/App/home/home.js"></script>
-    <script src="/Areas/App/testCtr.js"></script>
+    <script src="/Areas/App/searchResult/searcResult.js"></script>
+    <script src="/Areas/App/element/element.js"></script>
     <!--<script src="/Scripts/app/services/shared/resourcemngrservice.js"></script>
     <script src="/Scripts/app/directives/shared/datepicker.js"></script>
     <script src="/Scripts/app/directives/shared/modal.js"></script>

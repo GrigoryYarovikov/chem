@@ -11,10 +11,9 @@
     function loadResources() {
         //$scope.resources = resourceSvc.getTopFiveResources();
         $scope.malina = 'malina';
-        $scope.target = $location.search()['target'];
     }
 
     function search() {
-
+        $location.url('/search?q=' + $scope.query);
     }
 }]);

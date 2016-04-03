@@ -1,4 +1,4 @@
-﻿window.app = angular.module('resourceManagerApp', [ 'ngRoute', 'ngResource', 'ngAnimate', 'custom-utilities']);
+﻿window.app = angular.module('resourceManagerApp', ['ngRoute', 'ngResource', 'ngAnimate', 'custom-utilities', 'bw.paging']);
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$provide', function ($routeProvider, $locationProvider, $httpProvider, $provide) {
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
@@ -16,9 +16,10 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$provide', 
         //.when('/Resources/Edit/:resourceId', { templateUrl: '/Scripts/app/views/resources/Edit.html', controller: 'ResourceEditCtrl' })
         //.when('/Resources/:resourceId', { templateUrl: '/Scripts/app/views/resources/Details.html', controller: 'ResourceCtrl' })
         //.when('/Activities/Add', { templateUrl: '/Scripts/app/views/activities/Add.html', controller: 'ActivityAddCtrl' })
-        .when('/', { templateUrl: '/Areas/App/home/Home.html', controller: 'HomeCtrl', title: 'Welcome to Home Page', caseInsensitiveMatch: true })
-        //.when('/Test', { templateUrl: '/Areas/App/testp.html', controller: 'TestCtrl', title: 'Welcome to Test Page', caseInsensitiveMatch: true })
+        .when('/', { templateUrl: '/Areas/App/home/Home.html', controller: 'HomeCtrl', title: 'Большой химический справочник', caseInsensitiveMatch: true })
+        .when('/Search', { templateUrl: '/Areas/App/searchResult/list.html', controller: 'SearchCtrl', title: 'Поиск химических веществ', caseInsensitiveMatch: true, reloadOnSearch: false })
         .when('/Error', { templateUrl: '/Areas/App/error/Error.html', controller: 'ErrorCtrl', title: 'Ошибка' })
+        .when('/substance/:id', { templateUrl: '/Areas/App/element/element.html', controller: 'ElementCtrl', title: 'Вещество', caseInsensitiveMatch: true, reloadOnSearch: false })
         .otherwise({
             redirectTo: '/Error'
         });

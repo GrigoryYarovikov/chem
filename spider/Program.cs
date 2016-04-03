@@ -8,7 +8,7 @@ using Abot.Poco;
 using System.Net;
 using Abot.Core;
 using CsQuery;
-using Spider.Helpers;
+using Common.Helpers;
 
 namespace Spider
 {

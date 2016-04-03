@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem", "chem\Chem.csproj", "{68132825-5D74-4C83-B1E0-AEE3C77B906A}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tmp.ModelsTester", "tmp.ModelsTester\tmp.ModelsTester.csproj", "{92CF087A-B98C-4D18-9274-D1EF2023A12B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spider", "spider\Spider.csproj", "{57559DC2-30C0-4B29-9796-8E82389AE684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{88A1B619-0663-4219-9A9C-DE975A2DC5E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{57559DC2-30C0-4B29-9796-8E82389AE684}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57559DC2-30C0-4B29-9796-8E82389AE684}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57559DC2-30C0-4B29-9796-8E82389AE684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

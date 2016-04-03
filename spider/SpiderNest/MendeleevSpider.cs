@@ -10,7 +10,7 @@ using System.Threading;
 using CsQuery;
 using System.Net;
 using Chem.Models;
-using Spider.Helpers;
+using Common.Helpers;
 using Chem.Managers;
 
 namespace Spider
