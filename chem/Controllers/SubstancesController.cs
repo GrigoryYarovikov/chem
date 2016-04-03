@@ -20,6 +20,7 @@ namespace Chem.Controllers
     public class SubstancesController : ApiController
     {
         SubstanceManager _substances = new SubstanceManager();
+        ElementManager _elements = new ElementManager();
 
         // GET api/values
         public List<SubstancePreview> GetByQuery(string query)
@@ -44,9 +45,26 @@ namespace Chem.Controllers
         }
 
         // GET api/values/5
-        public Substance Get(int id)
+        public FullSubstanceModel Get(int id)
         {
-            return _substances.GetById(id);
+            var item = _substances.GetById(id);
+            var result = new FullSubstanceModel
+            {
+                BoilingPoint = item.BoilingPoint,
+                Categories = GetCategoryList(item.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray(),
+                Density = item.Density,
+                Elements = ParseFormula(item.Formula),
+                FlashPoint = item.FlashPoint,
+                Formula = item.Formula,
+                HazardSymbols = item.HazardSymbols,
+                MeltingPoint = item.MeltingPoint,
+                Names = item.Names.Select(x => x.Value).ToArray(),
+                RefractiveIndex = item.RefractiveIndex,
+                Schemes = item.Scheme.Select(x => x.Value.HtmlDecode()).ToArray(),
+                VapourPressur = item.VapourPressur,
+                WaterSolubility = WaterBoolToStr(item.WaterSolubility)
+            };
+            return result;
         }
 
         private List<Category> GetCategoryList(IEnumerable<Category> catList)
@@ -61,6 +79,19 @@ namespace Chem.Controllers
                 }
             }
             return result;
+        }
+
+        private string WaterBoolToStr(bool? b)
+        {
+            if (!b.HasValue)
+                return null;
+            return b.Value ? "да" : "нет";
+        }
+
+        private StructureElement[] ParseFormula(string formula)
+        {
+            var elements = _elements.GetAll();
+            return null;
         }
     }
 }

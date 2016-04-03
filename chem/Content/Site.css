@@ -52,13 +52,26 @@ textarea {
 .table_cell-value a:hover {
     background-color: #dcf7ee;
     border-radius: 4px;
+    text-decoration: none;
+}
+.table_cell-value a {
+    color: black;
 }
 
 .table_cell-img {
     width: 250px;
     height: 250px;
     font-size: xx-large;
-    text-align-last: center;
+    vertical-align: middle;
+    text-align: center;
+    display:table-cell;
+    border: ridge 1px;
+}
+
+.table_cell-img_full {
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 .table_cell-img canvas {

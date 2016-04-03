@@ -12,6 +12,7 @@ namespace Chem.Managers
     public class ElementManager
     {
         ChemContext _context;
+        IEnumerable<Element> _elements;
 
         public ElementManager()
         {
@@ -36,7 +37,10 @@ namespace Chem.Managers
 
         public IEnumerable<Element> GetAll()
         {
-            return _context.Set<Element>();
+            if (_elements == null)
+                _elements = _context.Set<Element>();
+
+            return _elements;
         }
 
         public Element GetBySign(string sign)

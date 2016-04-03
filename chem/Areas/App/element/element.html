@@ -1,7 +1,83 @@
 ﻿<div>
-    <h1>Список результатов по запросу "{{q}}"</h1>
     <div data-ng-show="isLoaded && !!resources" class="search_result-table">
-        yjhv
+        <h1>{{resources.Names[0]}}</h1>
+        <table cellpadding="0" cellspacing="0" class="bordered" border="1">
+            <tr>
+                <td class="table_cell-title">брутто-формула:</td>
+                <td class="table_cell-value">{{resources.Formula}}</td>
+            </tr>
+            <tr>
+                <td class="table_cell-title">категории:</td>
+                <td class="table_cell-value">
+                    <a data-ng-repeat="name in resources.Categories">
+                        {{name}};
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_cell-title">названия:</td>
+                <td class="table_cell-value">
+                    <a data-ng-repeat="name in resources.Names">
+                        {{name}};
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_cell-title">строение:</td>
+                <td class="table_cell-value">
+                    <div data-ng-repeat="scheme in resources.Schemes" class="table_cell-img table_cell-img_full">
+                        <span class="easyChemConfig auto-compile"></span>
+                        <div class="echem-formula">
+                            {{scheme}}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_cell-title">молекулярный вес:</td>
+                <td class="table_cell-value"></td>
+            </tr>
+            <tr>
+                <td class="table_cell-title">распределение масс:</td>
+                <td class="table_cell-value"></td>
+            </tr>
+            <tr data-ng-show="!!resources.MeltingPoint">
+                <td class="table_cell-title">температура плавления:</td>
+                <td class="table_cell-value">{{resources.MeltingPoint}}°C</td>
+            </tr>
+            <tr data-ng-show="!!resources.BoilingPoint">
+                <td class="table_cell-title">температура кипения:</td>
+                <td class="table_cell-value">{{resources.BoilingPoint}}°C</td>
+            </tr>
+            <tr data-ng-show="!!resources.FlashPoint">
+                <td class="table_cell-title">температура вспышки:</td>
+                <td class="table_cell-value">{{resources.FlashPoint}}°C</td>
+            </tr>
+            <tr data-ng-show="!!resources.Density">
+                <td class="table_cell-title">плотность:</td>
+                <td class="table_cell-value">{{resources.Density}}г/см<sup>3</sup></td>
+            </tr>
+            <tr data-ng-show="!!resources.VapourPressur">
+                <td class="table_cell-title">давление насыщеного пара:</td>
+                <td class="table_cell-value">{{resources.VapourPressur}}мм рт.ст.</td>
+            </tr>
+            <tr data-ng-show="!!resources.WaterSolubility">
+                <td class="table_cell-title">растворимость в воде:</td>
+                <td class="table_cell-value">{{resources.WaterSolubility}}</td>
+            </tr>
+            <tr data-ng-show="!!resources.RefractiveIndex">
+                <td class="table_cell-title">показатель преломления:</td>
+                <td class="table_cell-value">{{resources.RefractiveIndex}}</td>
+            </tr>
+            <tr data-ng-show="!!resources.HazardSymbols">
+                <td class="table_cell-title">категории опасности:</td>
+                <td class="table_cell-value">{{resources.HazardSymbols}}</td>
+            </tr>
+            <tr>
+                <td class="table_cell-title">реакции:</td>
+                <td class="table_cell-value"><a>просмотр</a></td>
+            </tr>
+        </table>
     </div>
     <div data-ng-show="isLoaded && !resources">
         К сожалению, по запросу ничего не найдено. Проверьте правильность запроса или воспользуйтесь <a href="/specialSearch">расширенным поиском</a>
