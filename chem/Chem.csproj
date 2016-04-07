@@ -210,14 +210,17 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Search\FullSubstanceModel.cs" />
+    <Compile Include="Models\Search\QueryModel.cs" />
     <Compile Include="Models\Search\StructureElement.cs" />
     <Compile Include="Models\Search\SubstancePreview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\SubstancesService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\App\advancedSearch\advancedSearch.html" />
     <Content Include="Areas\App\app.js" />
     <Content Include="Areas\App\element\element.html" />
     <Content Include="Areas\App\element\element.js" />
@@ -227,6 +230,7 @@
     <Content Include="Areas\App\home\home.js" />
     <Content Include="Areas\App\searchResult\searcResult.js" />
     <Content Include="Areas\App\searchResult\list.html" />
+    <Content Include="Areas\App\advancedSearch\advancedSearch.js" />
     <Content Include="Areas\App\services\substanceService.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />

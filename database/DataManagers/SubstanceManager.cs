@@ -34,7 +34,7 @@ namespace Chem.Managers
             _context.SaveChanges();
         }
 
-        public IEnumerable<Substance> GetAll()
+        public IQueryable<Substance> GetAll()
         {
             return _context.Set<Substance>()
                     .Include(x => x.Names)

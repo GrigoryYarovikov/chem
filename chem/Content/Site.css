@@ -119,3 +119,47 @@ table td {
 .text-muted {
     margin-bottom: 20px;
 }
+
+.chem_elem-short {
+    width: 25px;
+    display: inline-block;
+}
+
+.chem_elem-long {
+    width: 100px;
+    display: inline-block;
+}
+
+.advancedSearch_item {
+    width: auto;
+    margin: 10px 0;
+}
+
+.advancedSearch_label {
+    width: 180px;
+    display: inline-block;
+    text-align: left;
+}
+
+.advancedSearch_input {
+    width: 150px;
+    display:inline-block;
+    height: 25px;
+}
+
+.advancedSearch_input-alone {
+    width: 150px;
+    display:inline-block;
+    height: 25px;
+    margin-right: 226px;
+}
+
+.advancedSearch_rigth {
+    width: 800px;
+}
+
+.advancedSearch_dimension {
+    display: inline-block;
+    width: 60px;
+    text-align: left;
+}

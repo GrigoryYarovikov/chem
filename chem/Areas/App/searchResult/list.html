@@ -1,5 +1,5 @@
 ﻿<div>
-    <h1>Список результатов по запросу "{{q}}"</h1>
+    <h1>Список результатов по запросу "{{query.q}}"</h1>
     <div data-ng-show="isLoaded && !!currentPageList && currentPageList.length" class="search_result-table">
         <div data-ng-repeat=" substance in currentPageList">
             <p><h3>{{$index + 1 + pageSize * (currentPage - 1)}}: <a href="/substance/{{substance.Id}}">{{substance.Name}}</a></h3></p>

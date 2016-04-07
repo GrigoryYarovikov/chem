@@ -1,0 +1,61 @@
+﻿<div>
+    <div class="advancedSearch_left">
+        <span>Какие данные есть?</span>
+        <div class="advancedSearch_button">Физико-химические показатели</div>
+        <div class="advancedSearch_button">Качественные реакции</div>
+    </div>
+    <div class="center text-center advancedSearch_rigth">
+        <h1>БОЛЬШОЙ СПРАВОЧНИК ХИМИЧЕСКИХ ВЕЩЕСТВ</h1>
+        <input type="text" placeholder="Введите название или формулу вещества" data-ng-model="query.q" class="search-field" />
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label"></span>
+            <span class="advancedSearch_input">от</span>
+            <span class="advancedSearch_input">до</span>
+            <span class="advancedSearch_dimension"></span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">температура плавления:</span>
+            <input type="number" class="advancedSearch_input" data-ng-model="query.mp1" /> - 
+            <input type="number" class="advancedSearch_input" data-ng-model="query.mp2" /> 
+            <span class="advancedSearch_dimension">°C</span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">температура кипения:</span>
+            <input type="number" class="advancedSearch_input" data-ng-model="query.bp1" /> - 
+            <input type="number" class="advancedSearch_input" data-ng-model="query.bp2" /> 
+            <span class="advancedSearch_dimension">°C</span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">температура вспышки:</span>
+            <input type="number" class="advancedSearch_input" data-ng-model="query.fp1" /> - 
+            <input type="number" class="advancedSearch_input" data-ng-model="query.fp2" /> 
+            <span class="advancedSearch_dimension">°C</span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">плотность:</span>
+            <input type="number" class="advancedSearch_input" data-ng-model="query.d1" /> - 
+            <input type="number" class="advancedSearch_input" data-ng-model="query.d2" /> 
+            <span class="advancedSearch_dimension">г/см<sup>3</sup></span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">давление пара:</span>
+            <input type="number" class="advancedSearch_input" data-ng-model="query.vp1" /> - 
+            <input type="number" class="advancedSearch_input" data-ng-model="query.vp2" /> 
+            <span class="advancedSearch_dimension">мм рт.ст.</span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">показатель приломления:</span>
+            <input type="number" class="advancedSearch_input" data-ng-model="query.ri1" /> - 
+            <input type="number" class="advancedSearch_input" data-ng-model="query.ri2" /> 
+            <span class="advancedSearch_dimension"></span>
+        </div>
+        <div class="advancedSearch_item">
+            <span class="advancedSearch_label">растворимость в воде:</span>
+            <select class="advancedSearch_input-alone" data-ng-model="query.ws">
+                <option value="true">да</option>
+                <option value="false">нет</option>
+            </select>
+        </div>
+        <input type="button" value="Поиск" data-ng-click="search()" />
+    </div>
+</div>

@@ -1,10 +1,20 @@
 ﻿app.factory('substanceSvc', ['$resource', '$q', '$http', function ($resource, $q, $http) {
 
-    var getSubstanceByQuerry = function (query) {
+    var _query = {};
+
+    var getQuery = function () {
+        return _query;
+    }
+
+    var setQuery = function (query) {
+        _query = query;
+    }
+
+    var getSubstanceByQuerry = function () {
         return $http({
             method: 'GET',
             url: '/api/substances/getByQuery',
-            params: {query: query}
+            params: {query: _query}
         })
     };
 
@@ -19,7 +29,9 @@
 
     return {
         getSubstanceByQuerry: getSubstanceByQuerry,
-        getSubstanceById: getSubstanceById
+        getSubstanceById: getSubstanceById,
+        getQuery: getQuery,
+        setQuery: setQuery
     };
 
 }]);

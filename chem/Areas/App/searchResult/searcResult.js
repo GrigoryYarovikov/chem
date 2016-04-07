@@ -6,22 +6,23 @@
     $scope.total = 0;
     $scope.currentPageList = null;
     $scope.pageLink = "";
+    $scope.query = {};
 
     $scope.doCtrlPagingAct = doCtrlPagingAct;
 
     init();
 
     function init() {
-        $scope.q = $location.search()['q'].trim();
+        $scope.query = substanceSvc.getQuery();
         loadResources();
 
-        if (!$scope.q) {
+        if (!$scope.query.q) {
             $location.url('/search');
         }
     }
 
     function loadResources() {
-        substanceSvc.getSubstanceByQuerry($scope.q).then(function successCallback(response) {
+        substanceSvc.getSubstanceByQuerry().then(function successCallback(response) {
             $scope.resources = response.data;
             $scope.total = response.data.length;
             $scope.currentPageList = $scope.resources.slice(0, $scope.pageSize);
@@ -38,7 +39,7 @@
     }
 
     function doCtrlPagingAct(text, page, pageSize, total) {
-        $location.url('/search?q=' + $scope.q + '&p=' + page)
+        $location.url('/search?p=' + page)
         $scope.currentPageList = $scope.resources.slice(pageSize * page, pageSize * (page + 1));
         $timeout(drawScheme);
     };

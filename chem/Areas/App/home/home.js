@@ -1,7 +1,9 @@
-﻿app.controller('HomeCtrl', ['$scope', '$location', function ($scope, $location) {
+﻿app.controller('HomeCtrl', ['$scope', '$location', 'substanceSvc', function ($scope, $location, substanceSvc) {
 
     $scope.search = search;
-    $scope.query = "";
+    $scope.advancedSearch = advancedSearch;
+    $scope.query = {};
+    $scope.query.q = null;
 
     init();
     function init() {
@@ -14,6 +16,16 @@
     }
 
     function search() {
-        $location.url('/search?q=' + $scope.query);
+        saveQ();
+        $location.url('/search');
+    }
+
+    function advancedSearch() {
+        saveQ();
+        $location.url('/advancedSearch');
+    }
+
+    function saveQ() {
+        substanceSvc.setQuery($scope.query);
     }
 }]);

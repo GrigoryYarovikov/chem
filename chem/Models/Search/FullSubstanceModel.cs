@@ -12,10 +12,10 @@ namespace Chem.Models.Search
         public string[] Categories { get; set; }
         public string[] Names { get; set; }
         public string[] Schemes { get; set; }
-        public double MolecularWeight { 
+        public double? MolecularWeight { 
             get
             {
-                return 0;//Elements.Select(x => x.Weight * x.Count).Aggregate((x1,x2) => x1 + x2);
+                return Elements == null ? null : Elements.Select(x => x.Weight * x.Count).Aggregate((x1,x2) => x1 + x2) as double?;
             }
         }
         public StructureElement[] Elements { get; set; }

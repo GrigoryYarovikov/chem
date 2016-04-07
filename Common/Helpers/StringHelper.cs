@@ -47,7 +47,17 @@ namespace Common.Helpers
 
         static public bool HasValue(this string s)
         {
-            return !String.IsNullOrEmpty(s);
+            return !String.IsNullOrWhiteSpace(s);
+        }
+
+        static public bool IsNumeric(this char ch)
+        {
+            return Char.IsDigit(ch);
+        }
+
+        static public bool IsUpper(this char ch)
+        {
+            return Char.IsUpper(ch);
         }
     }
 }

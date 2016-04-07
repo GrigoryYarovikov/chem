@@ -34,12 +34,12 @@
                 </td>
             </tr>
             <tr>
-                <td class="table_cell-title">молекулярный вес:</td>
-                <td class="table_cell-value"></td>
+                <td class="table_cell-title" data-ng-show="!!resources.MolecularWeight">молекулярный вес:</td>
+                <td class="table_cell-value">{{resources.MolecularWeight.toFixed(3)}}</td>
             </tr>
             <tr>
-                <td class="table_cell-title">распределение масс:</td>
-                <td class="table_cell-value"></td>
+                <td class="table_cell-title" data-ng-show="!!resources.Elements">распределение масс:</td>
+                <td class="table_cell-value" ng-bind-html="massString"></td>
             </tr>
             <tr data-ng-show="!!resources.MeltingPoint">
                 <td class="table_cell-title">температура плавления:</td>
