@@ -1,11 +1,10 @@
-﻿<div class="center text-center home_search-form">
-    <h1>БОЛЬШОЙ СПРАВОЧНИК ХИМИЧЕСКИХ ВЕЩЕСТВ</h1>
-    <input type="text" placeholder="Введите название или формулу вещества" data-ng-model="query.q" class="search-field"/>
-    <input type="button" value="Поиск" data-ng-click="search()" />
-    <input type="button" data-ng-click="advancedSearch()" value="Расширенный поиск" />
-    <!--<a href="/Test">{{malina + target}}</a>-->
-</div>
-
+﻿<form class="center text-center home_search-form" data-ng-submit="search()">
+    <a href="/" title="На главную"><img src="/Content/logo.png" class="home-img"></a>
+    <p class="menu-title"><a href="/" title="На главную">БОЛЬШОЙ СПРАВОЧНИК ХИМИЧЕСКИХ ВЕЩЕСТВ</a></p>
+    <input type="text" placeholder="Введите название или формулу вещества" data-ng-model="query.q" class="search-field" />
+    <input type="submit" class="button" value="Поиск">
+    <a data-ng-click="advancedSearch()"><span class="button">Расширенный поиск</span></a>
+</form>
 
 
 

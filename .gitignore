@@ -7,3 +7,5 @@ database/bin/
 database/obj/
 tmp.ModelsTester/bin/
 tmp.ModelsTester/obj/
+Common/obj/Release/Common.csproj.FileListAbsolute.txt
+Common/obj/

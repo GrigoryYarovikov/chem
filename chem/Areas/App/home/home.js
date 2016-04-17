@@ -4,15 +4,14 @@
     $scope.advancedSearch = advancedSearch;
     $scope.query = {};
     $scope.query.q = null;
-
+    
     init();
-    function init() {
-        loadResources();
-    }
 
-    function loadResources() {
-        //$scope.resources = resourceSvc.getTopFiveResources();
-        $scope.malina = 'malina';
+    function init() {
+        var q = substanceSvc.getQuery();
+        if (q) {
+            $scope.query = q;
+        }
     }
 
     function search() {

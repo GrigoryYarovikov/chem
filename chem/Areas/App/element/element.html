@@ -1,7 +1,19 @@
-﻿<div>
-    <div data-ng-show="isLoaded && !!resources" class="search_result-table">
+﻿<div class="menu-container">
+    <form class="center" data-ng-submit="search()">
+        <a href="/" title="На главную"><img src="/Content/logo.png" class="menu-img"></a>
+        <div class="menu-form">
+            <p class="menu-title"><a href="/" title="На главную">БОЛЬШОЙ СПРАВОЧНИК ХИМИЧЕСКИХ ВЕЩЕСТВ</a></p>
+            <input type="text" placeholder="Введите название или формулу вещества" data-ng-model="query.q" class="search-field" />
+            <input type="submit" class="button" value="Поиск">
+            <a data-ng-click="advancedSearch()"><span class="button">Расширенный поиск</span></a>
+        </div>
+        <hr />
+    </form>
+</div>
+<div>
+    <div data-ng-show="isLoaded && !!resources && !error" class="search_result-table center">
         <h1>{{resources.Names[0]}}</h1>
-        <table cellpadding="0" cellspacing="0" class="bordered" border="1">
+        <table cellpadding="0" cellspacing="0" class="table">
             <tr>
                 <td class="table_cell-title">брутто-формула:</td>
                 <td class="table_cell-value">{{resources.Formula}}</td>
@@ -79,10 +91,13 @@
             </tr>
         </table>
     </div>
-    <div data-ng-show="isLoaded && !resources">
+    <div data-ng-show="isLoaded && !resources && !error">
         К сожалению, по запросу ничего не найдено. Проверьте правильность запроса или воспользуйтесь <a href="/specialSearch">расширенным поиском</a>
     </div>
-    <div data-ng-show="!isLoaded">
+    <div data-ng-show="!isLoaded && !error">
         Загрузка результатов...
+    </div>
+    <div data-ng-show="error">
+        При загрузке результатов произошла ошибка. Приносим извинения за временные неудобства.
     </div>
 </div>

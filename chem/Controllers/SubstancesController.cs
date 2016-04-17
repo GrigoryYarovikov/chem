@@ -34,5 +34,7 @@ namespace Chem.Controllers
         {
             return _service.GetById(id);
         }
+
+        public List<>
     }
 }
