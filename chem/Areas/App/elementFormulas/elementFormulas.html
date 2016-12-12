@@ -1,0 +1,33 @@
+﻿<div class="menu-container">
+    <form class="center" data-ng-submit="search()">
+        <a href="/" title="На главную"><img src="/Content/logo.png" class="menu-img"></a>
+        <div class="menu-form">
+            <p class="menu-title"><a href="/" title="На главную">БОЛЬШОЙ СПРАВОЧНИК ХИМИЧЕСКИХ ВЕЩЕСТВ</a></p>
+            <input type="text" placeholder="Введите название или формулу вещества" data-ng-model="query.q" class="search-field" />
+            <input type="submit" class="button" value="Поиск">
+            <a data-ng-click="advancedSearch()"><span class="button">Расширенный поиск</span></a>
+        </div>
+        <hr />
+    </form>
+</div>
+<div>
+    <div data-ng-show="isLoaded && !!resources && !error" class="search_result-table center">
+        <a onclick="window.history.back()" class="pointer"><p><< назад</p></a>
+
+        <div data-ng-repeat="item in resources">
+            {{$index + 1}}.
+            <span data-ng-show="!!item.ImgUrl"> <img src="{{item.ImgUrl}}" data-ng-click="loadData({{item.Href}})" /></span>
+            <span data-ng-show="!!item.TextValue" data-ng-bind-html="item.TextValue"></span>
+            <hr />
+        </div>
+    </div>
+    <div data-ng-show="isLoaded && !resources && !error">
+        К сожалению, формулы реакций не найдены.
+    </div>
+    <div data-ng-show="!isLoaded && !error">
+        Загрузка результатов...
+    </div>
+    <div data-ng-show="error">
+        При загрузке результатов произошла ошибка. Приносим извинения за временные неудобства.
+    </div>
+</div>

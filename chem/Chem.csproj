@@ -43,6 +43,10 @@
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CsQuery, Version=1.3.3.249, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CsQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -211,17 +215,21 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Search\FullSubstanceModel.cs" />
     <Compile Include="Models\Search\QueryModel.cs" />
+    <Compile Include="Models\Search\Reaction.cs" />
     <Compile Include="Models\Search\StructureElement.cs" />
     <Compile Include="Models\Search\SubstancePreview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\LoadPageService.cs" />
     <Compile Include="Services\SubstancesService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\App\advancedSearch\advancedSearch.html" />
     <Content Include="Areas\App\app.js" />
+    <Content Include="Areas\App\elementFormulas\elementFormulas.html" />
+    <Content Include="Areas\App\elementFormulas\elementFormulas.js" />
     <Content Include="Areas\App\element\element.html" />
     <Content Include="Areas\App\element\element.js" />
     <Content Include="Areas\App\error\error.html" />
@@ -236,6 +244,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\easychem.css" />
+    <Content Include="Content\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

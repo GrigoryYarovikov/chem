@@ -130,7 +130,7 @@ namespace Chem
         {
             var elements = _elements.GetAll().Select(x => x.Sign.ToLower()).ToList();
 
-            CombineFormulaVariants(s, elements, "");
+            CombineFormulaVariants(s.ToLower(), elements, "");
 
             return _store.Select(x => FormulaToBrutto(x)).ToList();
         }

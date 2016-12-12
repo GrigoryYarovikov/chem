@@ -35,6 +35,15 @@ namespace Chem.Controllers
             return _service.GetById(id);
         }
 
-        public List<>
+        // GET api/values/5
+        public List<Reaction> GetReactionList(int id)
+        {
+            var elem = _service.GetById(id);
+            var formula = elem.Formula;
+            var isOrganic = elem.Categories.Any(x => x.ToLower() == "органическое вещество");
+            var f = LoadPageService.LoadReactionList(formula, isOrganic);
+            if (f == null) return null;
+            return f.Take(100).ToList();
+        }
     }
 }

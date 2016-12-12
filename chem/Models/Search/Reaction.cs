@@ -9,5 +9,6 @@ namespace Chem.Models.Search
     {
         public string Href { get; set; }
         public string ImgUrl { get; set; }
+        public string TextValue { get; set; }
     }
 }

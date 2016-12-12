@@ -4,6 +4,7 @@
     $scope.advancedSearch = advancedSearch;
     $scope.query = {};
     $scope.query.q = null;
+    $scope.searchExample = searchExample;
     
     init();
 
@@ -26,5 +27,10 @@
 
     function saveQ() {
         substanceSvc.setQuery($scope.query);
+    }
+
+    function searchExample(q) {
+        $scope.query.q = q;
+        search();
     }
 }]);

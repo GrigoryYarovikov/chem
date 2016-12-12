@@ -10,6 +10,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$provide', 
         .when('/Search', { templateUrl: '/Areas/App/searchResult/list.html', controller: 'SearchCtrl', title: 'Поиск химических веществ', caseInsensitiveMatch: true, reloadOnSearch: false })
         .when('/Error', { templateUrl: '/Areas/App/error/Error.html', controller: 'ErrorCtrl', title: 'Ошибка' })
         .when('/substance/:id', { templateUrl: '/Areas/App/element/element.html', controller: 'ElementCtrl', title: 'Вещество', caseInsensitiveMatch: true, reloadOnSearch: false })
+        .when('/formulas/:id', { templateUrl: '/Areas/App/elementFormulas/elementFormulas.html', controller: 'ElementFormulasCtrl', title: 'Формулы', caseInsensitiveMatch: true, reloadOnSearch: false })
         .otherwise({
             redirectTo: '/Error'
         });
