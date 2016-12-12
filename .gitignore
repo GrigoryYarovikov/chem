@@ -7,3 +7,6 @@ database/bin/
 database/obj/
 tmp.ModelsTester/bin/
 tmp.ModelsTester/obj/
+Common/bin/
+Common/obj/
+bu.bak
