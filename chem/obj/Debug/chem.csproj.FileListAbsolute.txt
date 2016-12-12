@@ -132,3 +132,4 @@ C:\STW\chem\chem\obj\Debug\Chem.dll
 C:\STW\chem\chem\obj\Debug\Chem.pdb
 C:\STW\chem\chem\bin\Common.dll
 C:\STW\chem\chem\bin\Common.pdb
+C:\STW\chem\chem\bin\CsQuery.xml

@@ -50,7 +50,7 @@ namespace Chem
             var name = "";
             qToDb = BuildQuery(qToDb, query, out name);
 
-            var list = qToDb.ToList();
+            var list = qToDb.Take(100).ToList();
 
             var result = list.Select(x => new SubstancePreview 
             {
@@ -86,65 +86,89 @@ namespace Chem
             return b.Value ? "да" : "нет";
         }
 
-        //string _elementPattern = "[A-Z][^A-Z]*";
+        List<string> _store = new List<string>();
 
-        private string BFormulaOrNull(string s)
+        private void CombineFormulaVariants(string s, List<string> elements, string res)
+        {
+            if (!s.HasValue())
+            {
+                _store.Add(res);
+                return;
+            }
+
+            var uuu = s.TakeWhile(x => x.IsNumeric());
+            if (uuu != null && uuu.Any())
+            {
+                var ttt = uuu.Select(x => x.ToString()).Aggregate((s1, s2) => s1 + s2);
+                res += ttt;
+                CombineFormulaVariants(s.Substring(ttt.Length), elements, res);
+            }
+            else
+            {
+                var error = 0;
+                var ttt = s.Substring(0, 1);
+                if (elements.Contains(ttt))
+                    CombineFormulaVariants(s.Substring(1), elements, res + ttt.ToUpper());
+                else
+                    ++error;
+
+                if (s.Length > 1)
+                {
+                    ttt = s.Substring(0, 2);
+                    if (elements.Contains(ttt))
+                        CombineFormulaVariants(s.Substring(2), elements, res + ttt.Substring(0, 1).ToUpper() + ttt.Substring(1));
+                    else
+                        ++error;
+                }
+
+                if (error == 2)
+                    return;
+            }
+        }
+
+        private List<string> BFormulaOrNull(string s)
         {
             var elements = _elements.GetAll().Select(x => x.Sign.ToLower()).ToList();
-            var brackets = "()[]{}";
-            
-            var result = new Dictionary<string,int>();
 
-            var sign = "";
-            var count = "";
+            CombineFormulaVariants(s.ToLower(), elements, "");
 
-            var contains = false;
-            
-            foreach (var ch in s.ToLower())
+            return _store.Select(x => FormulaToBrutto(x)).ToList();
+        }
+
+        private string FormulaToBrutto(string formula)
+        {
+            var list = new Dictionary<string, int>();
+            var num = "";
+            var name = "";
+            foreach (var ch in formula)
             {
-                if (brackets.Contains(ch)) continue;
-
-                contains = elements.Contains(sign);
-
-                if (ch.IsNumeric())
+                if (ch.IsUpper())
                 {
-                    if (!sign.HasValue())
-                        return null;
-                    count += ch;
+                    var dg = num.ToNaturalOrZero();
+                    dg = dg == 0 ? 1 : dg;
+                    if (name.HasValue())
+                        if (list.ContainsKey(name))
+                            list[name] += dg;
+                        else
+                            list.Add(name, dg);
+
+                    name = ch.ToString();
+                    num = "";
                 }
-                else if (contains)
-                {
-                    var i = count.HasValue() ? count.ToNaturalOrZero() : 1;
-                    if (result.ContainsKey(sign))
-                        result[sign] += i;
-                    else
-                        result.Add(sign, i);
-                    sign = "";
-                    count = "";
-                    sign += ch;
-                }
+                else if (ch.IsNumeric())
+                    num += ch;
                 else
-                {
-                    if (sign.Length == 2)
-                        return null;
-                    sign += ch;
-                }
+                    name += ch;
             }
-
-            if (elements.Contains(sign))
-            {
-                var i = count.HasValue() ? count.ToNaturalOrZero() : 1;
-                if (result.ContainsKey(sign))
-                    result[sign] += i;
+            var d = num.ToNaturalOrZero();
+            d = d == 0 ? 1 : d;
+            if (name.HasValue())
+                if (list.ContainsKey(name))
+                    list[name] += d;
                 else
-                    result.Add(sign, i);
-            }
-            else if (sign.HasValue())
-                return null;
+                    list.Add(name, d);
 
-            return result.OrderBy(x => x.Key)
-                .Select(x => x.Key + (x.Value == 1 ? "" : x.Value.ToString()))
-                .Aggregate((x, y) => x + y);
+            return list.OrderBy(x => x.Key).Select(x => x.Key + (x.Value == 1 ? "" : x.Value.ToString())).Aggregate((x, y) => x + y);
         }
 
         private StructureElement[] ParseFormula(string formula)
@@ -165,13 +189,13 @@ namespace Chem
                 }
                 else if (ch.IsNumeric())
                     num += ch;
-                else 
+                else
                     name += ch;
             }
             var elem = GetElement(name, num);
             if (elem != null)
                 list.Add(elem);
-            
+
             var elements = _elements.GetAll();
 
             foreach (var item in list)
@@ -232,15 +256,15 @@ namespace Chem
             if (q.q.HasValue())
             {
                 //var list = q.q.Split();
-                var formula = BFormulaOrNull(q.q.Trim());
-                if (formula.HasValue())
-                    set = set.Where(x => x.Formula.ToLower() == formula);
+                var formulas = BFormulaOrNull(q.q.Trim());
+                if (formulas != null && formulas.Count > 0)
+                    set = set.Where(x => formulas.Contains(x.Formula));
                 else
                 {
                     set = set.Where(x => x.Names.Any(
                         y => y.Value.ToLower().Contains(q.q)
                         ));
-                    name = q.q.Trim();
+                    name = q.q.Trim().ToLower();
                 }
             }
             return set;

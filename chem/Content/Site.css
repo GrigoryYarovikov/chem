@@ -1,6 +1,14 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,8 +32,23 @@ textarea {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.exampleSearch {
+    padding-left: 60px;
+}
+
+.example {
+    margin-top: 25px;
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
 .home_search-form {
-    width: 400px;
+    width: 500px;
+    margin-top: 100px;
 }
 
 .search-field {
@@ -46,7 +69,7 @@ textarea {
 .table_cell-title {
     width: 19%;
     font-weight: bold;
-    background-color: #f7f4d5;
+    background-color: #f5f5f5;
 }
 
 .table_cell-value a:hover {
@@ -96,7 +119,7 @@ li {
 }
 
 hr {
-    margin: 50px 0;
+    /*margin: 50px 0;*/
 }
 
 table {
@@ -162,4 +185,44 @@ table td {
     display: inline-block;
     width: 60px;
     text-align: left;
+}
+
+.button {
+    text-decoration: none !important;
+    color: #337ab7;
+    width: 150px;
+    display: inline-block;
+    border: #e8e5e5 solid 1px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    padding:2px;
+    text-align:center;
+    text-transform: lowercase;
+    font-family: Arial, sans-serif;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover, a:hover .button {
+    border-width: 2px;
+    padding: 1px;
+    cursor: pointer !important;
+    background-color: #e8f2f2;
+}
+
+.menu-img {
+    width: 130px;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.menu-form {
+    display: inline-block;
+}
+
+.menu-title {
+    font-size: 28px;
+    padding-top: 20px;
+}
+
+.home-img {
+    width: 200px;
 }

@@ -35,6 +35,9 @@
             }
             $scope.isLoaded = true;
             $timeout(drawScheme);
+        },
+        function errorCallback(reason) {
+            $scope.error = true;
         })
     }
 
@@ -43,4 +46,23 @@
         $scope.currentPageList = $scope.resources.slice(pageSize * page, pageSize * (page + 1));
         $timeout(drawScheme);
     };
+
+    //header
+    $scope.search = search;
+    $scope.advancedSearch = advancedSearch;
+
+    function search() {
+        saveQ();
+        $scope.isLoaded = false;
+        loadResources();
+    }
+
+    function advancedSearch() {
+        saveQ();
+        $location.url('/advancedSearch');
+    }
+
+    function saveQ() {
+        substanceSvc.setQuery($scope.query);
+    }
 }]);

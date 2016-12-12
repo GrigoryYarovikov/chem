@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Common.Helpers;
 
 namespace tmp.ModelsTester
 {
@@ -22,7 +23,117 @@ namespace tmp.ModelsTester
             //var ttt = Double.Parse("2.55E-05", CultureInfo.InvariantCulture);
             //AddData();
             //GetData();
-            Clear();
+            //Clear();
+            BFormulaOrNull("ho20oh");
+            //RenweDatabase();
+        }
+
+        static List<string> _store = new List<string>();
+
+        private static void PPP(string s, List<string> elements, string res)
+        {
+            if (!s.HasValue())
+            {
+                _store.Add(res);
+                return;
+            }
+
+            var uuu = s.TakeWhile(x => x.IsNumeric());
+            if (uuu != null && uuu.Any())
+            {
+                var ttt = uuu.Select(x => x.ToString()).Aggregate((s1, s2) => s1 + s2);
+                res += ttt;
+                PPP(s.Substring(ttt.Length), elements, res);
+            }
+            else
+            {
+                var error = 0;
+                var ttt = s.Substring(0, 1);
+                if (elements.Contains(ttt))
+                    PPP(s.Substring(1), elements, res + ttt.ToUpper());
+                else
+                    ++error;
+
+                if (s.Length > 1)
+                {
+                    ttt = s.Substring(0, 2);
+                    if (elements.Contains(ttt))
+                        PPP(s.Substring(2), elements, res + ttt.Substring(0, 1).ToUpper() + ttt.Substring(1));
+                    else
+                        ++error;
+                }
+
+                if (error == 2) 
+                    return;
+            }
+        }
+
+
+        private static string BFormulaOrNull(string s)
+        {
+            var context = ChemContext.Create();
+            var elements = context.Set<Element>().Select(x => x.Sign.ToLower()).ToList();
+
+            PPP(s, elements, "");
+
+            var iii = _store.Select(x => ParseFormula1(x)).ToList();
+            return null;
+        }
+
+
+        private static void RenweDatabase()
+        {
+            using (var context = ChemContext.Create())
+            {
+                var elements = context.Set<Element>().Select(x => x.Sign.ToLower()).ToList();
+                var l = context.Set<Substance>();
+                foreach (var item in l)
+                {
+                    var ttt = ParseFormula1(item.Formula);
+                    if (ttt.HasValue())
+                        item.Formula = ttt;
+                    else
+                    { 
+                    }
+                }
+                context.SaveChanges();
+            }
+        }
+
+        private static string ParseFormula1(string formula)
+        {
+            var list = new Dictionary<string, int>();
+            var num = "";
+            var name = "";
+            foreach (var ch in formula)
+            {
+                if (ch.IsUpper())
+                {
+                    var dg = num.ToNaturalOrZero();
+                    dg = dg == 0 ? 1 : dg;
+                    if (name.HasValue())
+                        if (list.ContainsKey(name))
+                            list[name] += dg;
+                        else
+                            list.Add(name, dg);
+
+                    name = ch.ToString();
+                    num = "";
+                }
+                else if (ch.IsNumeric())
+                    num += ch;
+                else
+                    name += ch;
+            }
+            var d = num.ToNaturalOrZero();
+            d = d == 0 ? 1 : d;
+            if (name.HasValue())
+                if (list.ContainsKey(name))
+                    list[name] += d;
+                else
+                    list.Add(name, d);
+
+            return list.OrderBy(x => x.Key).Select(x => x.Key + (x.Value == 1 ? "" : x.Value.ToString())).Aggregate((x, y) => x + y);
         }
 
         static void AddData()

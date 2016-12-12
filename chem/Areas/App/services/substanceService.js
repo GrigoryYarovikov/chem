@@ -26,12 +26,20 @@
         })
     };
 
+    var getSubstanceFormulas = function (id) {
+        return $http({
+            method: 'GET',
+            url: '/api/substances/getReactionList',
+            params: { id: id }
+        })
+    }
 
     return {
         getSubstanceByQuerry: getSubstanceByQuerry,
         getSubstanceById: getSubstanceById,
         getQuery: getQuery,
-        setQuery: setQuery
+        setQuery: setQuery,
+        getSubstanceFormulas: getSubstanceFormulas
     };
 
 }]);

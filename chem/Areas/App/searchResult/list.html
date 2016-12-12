@@ -1,9 +1,23 @@
-﻿<div>
-    <h1>Список результатов по запросу "{{query.q}}"</h1>
-    <div data-ng-show="isLoaded && !!currentPageList && currentPageList.length" class="search_result-table">
+﻿<div class="menu-container">
+    <form class="center" data-ng-submit="search()">
+        <a href="/" title="На главную"><img src="/Content/logo.png" class="menu-img"></a>
+        <div class="menu-form">
+            <p class="menu-title"><a href="/" title="На главную">БОЛЬШОЙ СПРАВОЧНИК ХИМИЧЕСКИХ ВЕЩЕСТВ</a></p>
+            <input type="text" placeholder="Введите название или формулу вещества" data-ng-model="query.q" class="search-field" />
+            <input type="submit" class="button" value="Поиск">
+            <a data-ng-click="advancedSearch()"><span class="button">Расширенный поиск</span></a>
+        </div>
+        <hr />
+    </form>
+</div>
+<div data-ng-show="isLoaded && !error && !!currentPageList && currentPageList.length" class="center search_result-table">
+    <h3 data-ng-show="total == 100">Представлены первые 100 элементов по запросу</h3>
+    <h3 data-ng-hide="total == 100">Найдено {{total}} результатов</h3>
+
+    <div class="search_result-table">
         <div data-ng-repeat=" substance in currentPageList">
             <p><h3>{{$index + 1 + pageSize * (currentPage - 1)}}: <a href="/substance/{{substance.Id}}">{{substance.Name}}</a></h3></p>
-            <table cellpadding="0" cellspacing="0" class="bordered" border="1">
+            <table cellpadding="0" cellspacing="0" class="table">
                 <tr>
                     <td class="table_cell-title">Брутто-формула:</td>
                     <td class="table_cell-value">{{substance.Formula}}</td>
@@ -42,10 +56,13 @@
             </div>
         </div>
     </div>
-    <div data-ng-show="isLoaded && (!currentPageList || !currentPageList.length)">
-        К сожалению, по запросу ничего не найдено. Проверьте правильность запроса или воспользуйтесь <a href="/specialSearch">расширенным поиском</a>
-    </div>
-    <div data-ng-show="!isLoaded">
-        Загрузка результатов...
-    </div>
+</div>
+<div data-ng-show="isLoaded && !error && (!currentPageList || !currentPageList.length)">
+    К сожалению, по запросу ничего не найдено. Проверьте правильность запроса или воспользуйтесь <a href="/advancedSearch">расширенным поиском</a>
+</div>
+<div data-ng-show="!isLoaded && !error">
+    Загрузка результатов...
+</div>
+<div data-ng-show="error">
+    При загрузке результатов произошла ошибка. Приносим извинения за временные неудобства.
 </div>

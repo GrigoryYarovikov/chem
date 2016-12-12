@@ -17,6 +17,9 @@
             $scope.isLoaded = true;
             $timeout(drawScheme);
             $scope.massString = $sce.trustAsHtml(buildMassString($scope.resources.Elements));
+        },
+        function errorCallback(reason) {
+            $scope.error = true;
         })
     }
 
@@ -34,5 +37,25 @@
                 "</p>";
         });
         return s;
+    }
+
+        //header
+    $scope.search = search;
+    $scope.advancedSearch = advancedSearch;
+    $scope.query = {};
+    $scope.query.q = null;
+
+    function search() {
+        saveQ();
+        $location.url('/search');
+    }
+
+    function advancedSearch() {
+        saveQ();
+        $location.url('/advancedSearch');
+    }
+
+    function saveQ() {
+        substanceSvc.setQuery($scope.query);
     }
 }]);
