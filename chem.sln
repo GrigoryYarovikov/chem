@@ -18,6 +18,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem.Models", "Chem.Models\Chem.Models.csproj", "{0F8E381D-B3DA-471D-9B97-399C537E450C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemTests", "ChemTests\ChemTests.csproj", "{EAF81B3C-8CC2-4921-ADC5-AA878CCD36A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F8E381D-B3DA-471D-9B97-399C537E450C} = {0F8E381D-B3DA-471D-9B97-399C537E450C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
