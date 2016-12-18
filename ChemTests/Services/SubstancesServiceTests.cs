@@ -9,7 +9,6 @@ namespace Chem.Tests
         public void CreateSubstancesServiceTest()
         {
             Assert.NotNull(new SubstancesService());
-            //Assert.True(new SubstancesService(), "cannot create service");
         }
 #endregion // CreateSubstanceTests
 
