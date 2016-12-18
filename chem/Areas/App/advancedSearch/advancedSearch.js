@@ -59,7 +59,7 @@ function addDirective(name, validator) {
                 }
 
                 function getOtherValue() {
-                    return parseInt(otherElement.value);
+                    return parseFloat(otherElement.value);
                 }
 
                 ctrl.$validators.gte = function (currentValue) {
