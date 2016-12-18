@@ -23,12 +23,6 @@ namespace Chem.Controllers.Tests
         }
 
         [Fact()]
-        public void GetTest1()
-        {
-            Assert.True(false, "This test needs an implementation");
-        }
-
-        [Fact()]
         public void GetReactionListTest()
         {
             Assert.True(false, "This test needs an implementation");
