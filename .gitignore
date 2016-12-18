@@ -16,3 +16,9 @@ Chem.Models/bin/Debug/
 Chem.Models/obj/
 Chem.Services/bin/
 Chem.Services/obj/
+*/bin/
+/tmp.ModelsTester/bin
+/chem/bin
+/database/bin
+.vs
+*/obj/
