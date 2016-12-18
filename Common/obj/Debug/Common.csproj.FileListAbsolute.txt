@@ -7,3 +7,4 @@ F:\projects\chem\chem\Common\bin\Debug\Common.dll
 F:\projects\chem\chem\Common\bin\Debug\Common.pdb
 F:\projects\chem\chem\Common\obj\Debug\Common.dll
 F:\projects\chem\chem\Common\obj\Debug\Common.pdb
+F:\projects\chem\chem\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
