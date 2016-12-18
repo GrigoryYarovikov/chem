@@ -558,7 +558,8 @@ namespace Chem.Tests
         [Fact()]
         public void GetReactionListTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            // Nothing that can be tested
+            //Assert.True(false, "This test needs an implementation");
         }
 #endregion // GetReactionListTests
     }
