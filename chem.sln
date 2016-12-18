@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spider", "spider\Spider.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{88A1B619-0663-4219-9A9C-DE975A2DC5E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{8D7C8BD7-C608-4E83-A4B3-66C475D1BF47}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem.Services", "Chem.Services\Chem.Services.csproj", "{EBC6A325-36DE-4262-8302-4097105E8E0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem.Models", "Chem.Models\Chem.Models.csproj", "{0F8E381D-B3DA-471D-9B97-399C537E450C}"
@@ -45,10 +43,6 @@ Global
 		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A1B619-0663-4219-9A9C-DE975A2DC5E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D7C8BD7-C608-4E83-A4B3-66C475D1BF47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D7C8BD7-C608-4E83-A4B3-66C475D1BF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D7C8BD7-C608-4E83-A4B3-66C475D1BF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D7C8BD7-C608-4E83-A4B3-66C475D1BF47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EBC6A325-36DE-4262-8302-4097105E8E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EBC6A325-36DE-4262-8302-4097105E8E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBC6A325-36DE-4262-8302-4097105E8E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU

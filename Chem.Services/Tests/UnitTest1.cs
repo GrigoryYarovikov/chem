@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Chem.Models;
+using Chem;
 
 namespace UnitTestProject
 {
