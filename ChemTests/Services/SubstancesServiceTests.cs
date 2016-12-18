@@ -4,22 +4,24 @@ namespace Chem.Tests
 {
     public class SubstancesServiceTests
     {
-        // CreateSubstance tests
+ #region CreateSubstanceTests
         [Fact()]
         public void CreateSubstancesServiceTest()
         {
             Assert.NotNull(new SubstancesService());
             //Assert.True(new SubstancesService(), "cannot create service");
         }
+#endregion // CreateSubstanceTests
 
-        // GetById tests
+ #region GetByIdTest
         [Fact()]
         public void GetByIdTest()
         {
             Assert.True(false, "This test needs an implementation");
         }
+#endregion // GetByIdTest
 
-        // GetByQuery tests
+#region GetByQueryTests
         [Fact()]
         public void GetByEmptyModelTest()
         {
@@ -30,80 +32,84 @@ namespace Chem.Tests
             Assert.True(result.Count == 100, "return first 100 elements from db if model is empty");
         }
 
-        [Fact()]
-        public void GetByBoilingPointGreatThanTest()
-        {
-            const int boilingPoint = 10;
-            var service = new SubstancesService();
-            var model = new Models.Search.QueryModel();
-            model.bp1 = boilingPoint;
-
-            var result = service.GetByQuery(model);
-
-            Assert.True(result.Count > 0);
-            foreach(var previewElem in result)
+#region BoilingPointTests
+            [Fact()]
+            public void GetByBoilingPointGreatThanTest()
             {
-                var elem = service.GetById(previewElem.Id);
-                Assert.True(elem.BoilingPoint >= boilingPoint);
+                const int boilingPoint = 10;
+                var service = new SubstancesService();
+                var model = new Models.Search.QueryModel();
+                model.bp1 = boilingPoint;
+
+                var result = service.GetByQuery(model);
+
+                Assert.True(result.Count > 0);
+                foreach(var previewElem in result)
+                {
+                    var elem = service.GetById(previewElem.Id);
+                    Assert.True(elem.BoilingPoint >= boilingPoint);
+                }
             }
-        }
 
-        [Fact()]
-        public void GetByBoilingPointLessThanTest()
-        {
-            const int boilingPoint = 100;
-            var service = new SubstancesService();
-            var model = new Models.Search.QueryModel();
-            model.bp2 = boilingPoint;
-
-            var result = service.GetByQuery(model);
-
-            Assert.True(result.Count > 0);
-            foreach (var previewElem in result)
+            [Fact()]
+            public void GetByBoilingPointLessThanTest()
             {
-                var elem = service.GetById(previewElem.Id);
-                Assert.True(elem.BoilingPoint <= boilingPoint);
+                const int boilingPoint = 100;
+                var service = new SubstancesService();
+                var model = new Models.Search.QueryModel();
+                model.bp2 = boilingPoint;
+
+                var result = service.GetByQuery(model);
+
+                Assert.True(result.Count > 0);
+                foreach (var previewElem in result)
+                {
+                    var elem = service.GetById(previewElem.Id);
+                    Assert.True(elem.BoilingPoint <= boilingPoint);
+                }
             }
-        }
 
-        [Fact()]
-        public void GetByEqualBoilingPointTest()
-        {
-            const int boilingPoint = 100;
-            var service = new SubstancesService();
-            var model = new Models.Search.QueryModel();
-            model.bp1 = boilingPoint;
-            model.bp2 = boilingPoint;
-
-            var result = service.GetByQuery(model);
-
-            Assert.True(result.Count > 0);
-            foreach (var previewElem in result)
+            [Fact()]
+            public void GetByEqualBoilingPointTest()
             {
-                var elem = service.GetById(previewElem.Id);
-                Assert.True(elem.BoilingPoint == boilingPoint);
+                const int boilingPoint = 100;
+                var service = new SubstancesService();
+                var model = new Models.Search.QueryModel();
+                model.bp1 = boilingPoint;
+                model.bp2 = boilingPoint;
+
+                var result = service.GetByQuery(model);
+
+                Assert.True(result.Count > 0);
+                foreach (var previewElem in result)
+                {
+                    var elem = service.GetById(previewElem.Id);
+                    Assert.True(elem.BoilingPoint == boilingPoint);
+                }
             }
-        }
 
-        [Fact()]
-        public void GetByUnreachableBoilingPointTest()
-        {
-            const int boilingPoint = 100;
-            var service = new SubstancesService();
-            var model = new Models.Search.QueryModel();
-            model.bp1 = boilingPoint;
-            model.bp2 = 0;
+            [Fact()]
+            public void GetByUnreachableBoilingPointTest()
+            {
+                const int boilingPoint = 100;
+                var service = new SubstancesService();
+                var model = new Models.Search.QueryModel();
+                model.bp1 = boilingPoint;
+                model.bp2 = 0;
 
-            var result = service.GetByQuery(model);
+                var result = service.GetByQuery(model);
 
-            Assert.True(result.Count == 0);
-        }
+                Assert.True(result.Count == 0);
+            }
+#endregion // BoilingPointTests
+#endregion // GetByQueryTests
 
-        // GetReactionList tests
+#region GetReactionListTests
         [Fact()]
         public void GetReactionListTest()
         {
             Assert.True(false, "This test needs an implementation");
         }
+#endregion // GetReactionListTests
     }
 }
