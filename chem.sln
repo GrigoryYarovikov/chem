@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem", "chem\Chem.csproj", "{68132825-5D74-4C83-B1E0-AEE3C77B906A}"
 EndProject
@@ -16,6 +16,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem.Services", "Chem.Services\Chem.Services.csproj", "{EBC6A325-36DE-4262-8302-4097105E8E0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chem.Models", "Chem.Models\Chem.Models.csproj", "{0F8E381D-B3DA-471D-9B97-399C537E450C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemTests", "ChemTests\ChemTests.csproj", "{EAF81B3C-8CC2-4921-ADC5-AA878CCD36A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F8E381D-B3DA-471D-9B97-399C537E450C} = {0F8E381D-B3DA-471D-9B97-399C537E450C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +56,10 @@ Global
 		{0F8E381D-B3DA-471D-9B97-399C537E450C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F8E381D-B3DA-471D-9B97-399C537E450C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F8E381D-B3DA-471D-9B97-399C537E450C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF81B3C-8CC2-4921-ADC5-AA878CCD36A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF81B3C-8CC2-4921-ADC5-AA878CCD36A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF81B3C-8CC2-4921-ADC5-AA878CCD36A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF81B3C-8CC2-4921-ADC5-AA878CCD36A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

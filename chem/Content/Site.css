@@ -226,3 +226,11 @@ input[type="button"]:hover, input[type="submit"]:hover, a:hover .button {
 .home-img {
     width: 200px;
 }
+
+.search-validation-error {    
+    color: #F44336;
+    background-color: rgba(1, 1, 1, 0.1);
+    margin: 26px 120px;
+    border-radius: 4px;
+    padding: 10px;
+}
