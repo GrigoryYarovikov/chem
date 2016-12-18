@@ -10,3 +10,9 @@ tmp.ModelsTester/obj/
 Common/bin/
 Common/obj/
 bu.bak
+UnitTestProject/bin/
+UnitTestProject/obj/
+Chem.Models/bin/Debug/
+Chem.Models/obj/
+Chem.Services/bin/
+Chem.Services/obj/

@@ -65,6 +65,16 @@ namespace Chem
             return result;
         }
 
+        public List<Reaction> GetReactionList(int id)
+        {
+            var elem = GetById(id);
+            var formula = elem.Formula;
+            var isOrganic = elem.Categories.Any(x => x.ToLower() == "органическое вещество");
+            var f = LoadPageService.LoadReactionList(formula, isOrganic);
+            if (f == null) return null;
+            return f.Take(100).ToList();
+        }
+
         private List<Category> GetCategoryList(IEnumerable<Category> catList)
         {
             var result = new List<Category>();

@@ -133,3 +133,7 @@ C:\STW\chem\chem\obj\Debug\Chem.pdb
 C:\STW\chem\chem\bin\Common.dll
 C:\STW\chem\chem\bin\Common.pdb
 C:\STW\chem\chem\bin\CsQuery.xml
+C:\STW\chem\chem\bin\Chem.Models.dll
+C:\STW\chem\chem\bin\Chem.Services.dll
+C:\STW\chem\chem\bin\Chem.Models.pdb
+C:\STW\chem\chem\bin\Chem.Services.pdb
