@@ -3,3 +3,7 @@ C:\STW\chem\Common\bin\Debug\Common.pdb
 C:\STW\chem\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\STW\chem\Common\obj\Debug\Common.dll
 C:\STW\chem\Common\obj\Debug\Common.pdb
+F:\projects\chem\chem\Common\bin\Debug\Common.dll
+F:\projects\chem\chem\Common\bin\Debug\Common.pdb
+F:\projects\chem\chem\Common\obj\Debug\Common.dll
+F:\projects\chem\chem\Common\obj\Debug\Common.pdb

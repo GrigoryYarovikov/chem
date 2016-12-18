@@ -211,18 +211,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountBindingModels.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Search\FullSubstanceModel.cs" />
-    <Compile Include="Models\Search\QueryModel.cs" />
-    <Compile Include="Models\Search\Reaction.cs" />
-    <Compile Include="Models\Search\StructureElement.cs" />
-    <Compile Include="Models\Search\SubstancePreview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
-    <Compile Include="Services\LoadPageService.cs" />
-    <Compile Include="Services\SubstancesService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1095,6 +1086,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Chem.Models\Chem.Models.csproj">
+      <Project>{0f8e381d-b3da-471d-9b97-399c537e450c}</Project>
+      <Name>Chem.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chem.Services\Chem.Services.csproj">
+      <Project>{ebc6a325-36de-4262-8302-4097105e8e0a}</Project>
+      <Name>Chem.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{88a1b619-0663-4219-9a9c-de975a2dc5e5}</Project>
       <Name>Common</Name>
