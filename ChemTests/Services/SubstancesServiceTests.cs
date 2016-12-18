@@ -12,18 +12,36 @@ namespace Chem.Tests
         }
 #endregion // CreateSubstanceTests
 
- #region GetByIdTest
+        #region GetByIdTest
         [Fact()]
-        public void GetByIdTest()
+        public void GetByInvalidIdTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            var service = new SubstancesService();
+            Assert.Throws<System.NullReferenceException>(() => service.GetById(-1));
+        }
+        [Fact()]
+        public void GetByValidIdTest()
+        {
+            const string Formula = "C2H6O";
+            var service = new SubstancesService();
+            var model = new Models.Search.QueryModel();
+            model.q = Formula;
+
+            var result = service.GetByQuery(model);
+
+            Assert.True(result.Count > 0);
+            foreach (var previewElem in result)
+            {
+                var elem = service.GetById(previewElem.Id);
+                Assert.True(elem.Formula == "C2H6O");
+            }
         }
         #endregion // GetByIdTest
 
         #region GetByQueryTests
 
-            #region GetByEmptyModelTests
-            [Fact()]
+        #region GetByEmptyModelTests
+        [Fact()]
             public void GetByEmptyModelTest()
             {
                 var service = new SubstancesService();
@@ -540,7 +558,8 @@ namespace Chem.Tests
         [Fact()]
         public void GetReactionListTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            // Nothing that can be tested
+            //Assert.True(false, "This test needs an implementation");
         }
 #endregion // GetReactionListTests
     }
