@@ -138,8 +138,6 @@ C:\STW\chem\chem\bin\Chem.Services.dll
 C:\STW\chem\chem\bin\Chem.Models.pdb
 C:\STW\chem\chem\bin\Chem.Services.pdb
 F:\projects\chem\chem\chem\obj\Debug\Chem.csprojResolveAssemblyReference.cache
-F:\projects\chem\chem\chem\obj\Debug\Chem.dll
-F:\projects\chem\chem\chem\obj\Debug\Chem.pdb
 F:\projects\chem\chem\chem\bin\Chem.dll.config
 F:\projects\chem\chem\chem\bin\Chem.dll
 F:\projects\chem\chem\chem\bin\Chem.pdb
@@ -183,7 +181,6 @@ F:\projects\chem\chem\chem\bin\Chem.Services.pdb
 F:\projects\chem\chem\chem\bin\Common.pdb
 F:\projects\chem\chem\chem\bin\database.pdb
 F:\projects\chem\chem\chem\bin\Autofac.xml
-F:\projects\chem\chem\chem\bin\CsQuery.xml
 F:\projects\chem\chem\chem\bin\Newtonsoft.Json.xml
 F:\projects\chem\chem\chem\bin\System.Net.Http.Formatting.xml
 F:\projects\chem\chem\chem\bin\System.Web.Helpers.xml
@@ -211,3 +208,5 @@ F:\projects\chem\chem\chem\bin\Microsoft.Owin.Security.Google.xml
 F:\projects\chem\chem\chem\bin\Microsoft.Owin.Security.Twitter.xml
 F:\projects\chem\chem\chem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\projects\chem\chem\chem\bin\System.Web.Http.Owin.xml
+F:\projects\chem\chem\chem\obj\Debug\Chem.dll
+F:\projects\chem\chem\chem\obj\Debug\Chem.pdb

@@ -47,7 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LoadPageService.cs" />
     <Compile Include="Services\SubstancesService.cs" />
-    <Compile Include="Tests\UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chem.Models\Chem.Models.csproj">

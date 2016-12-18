@@ -43,7 +43,6 @@ F:\projects\chem\chem\database\bin\Debug\EntityFramework.xml
 F:\projects\chem\chem\database\bin\Debug\EntityFramework.SqlServer.xml
 F:\projects\chem\chem\database\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 F:\projects\chem\chem\database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-F:\projects\chem\chem\database\obj\Debug\Database.csprojResolveAssemblyReference.cache
 F:\projects\chem\chem\database\obj\Debug\database.Migrations.initial.resources
 F:\projects\chem\chem\database\obj\Debug\database.Migrations.categoryFix.resources
 F:\projects\chem\chem\database\obj\Debug\Database.csproj.GenerateResource.Cache
