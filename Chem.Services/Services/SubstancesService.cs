@@ -49,8 +49,8 @@ namespace Chem
 
             var name = "";
             qToDb = BuildQuery(qToDb, query, out name);
-            name = name.ToLower();
             var list = qToDb.Take(100).ToList();
+            name = name.ToLower();
             var result = list.Select(x => 
             {
                 var substance = new SubstancePreview(); 
