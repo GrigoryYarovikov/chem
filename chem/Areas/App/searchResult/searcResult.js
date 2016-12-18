@@ -21,20 +21,20 @@
         }
     }
 
+    function getPageNumber() {
+        var numAsString = $location.search()['p'];
+        var pageNum = parseInt(numAsString);
+        var maxPageNum = $scope.total / $scope.pageSize;
+        return (!isNaN(pageNum) && p > 0 && p <= maxPageNum) ? pageNum : 1;
+    }
+
     function loadResources() {
         substanceSvc.getSubstanceByQuerry().then(function successCallback(response) {
             $scope.resources = response.data;
             $scope.total = response.data.length;
             $scope.currentPageList = $scope.resources.slice(0, $scope.pageSize);
-
-            var p = $location.search()['p'];
-            if (!isNaN(p) && p > 0 && p < $scope.total / $scope.pageSize) {
-                p = parseInt(p);
-                $scope.currentPage = p;
-                $scope.currentPageList = $scope.resources.slice($scope.pageSize * p, $scope.pageSize * (p + 1));
-            }
+            doCtrlPagingAct("", getPageNumber(), $scope.pageSize, $scope.pageSize);
             $scope.isLoaded = true;
-            $timeout(drawScheme);
         },
         function errorCallback(reason) {
             $scope.error = true;
@@ -43,7 +43,8 @@
 
     function doCtrlPagingAct(text, page, pageSize, total) {
         $location.url('/search?p=' + page)
-        $scope.currentPageList = $scope.resources.slice(pageSize * page, pageSize * (page + 1));
+        $scope.currentPage = page;
+        $scope.currentPageList = $scope.resources.slice(pageSize * (page - 1), pageSize * page);
         $timeout(drawScheme);
     };
 
