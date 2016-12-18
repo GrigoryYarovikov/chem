@@ -51,15 +51,17 @@ namespace Chem
             qToDb = BuildQuery(qToDb, query, out name);
             name = name.ToLower();
             var list = qToDb.Take(100).ToList();
-            var result = list.Select(x => new SubstancePreview 
+            var result = list.Select(x => 
             {
-                Name = x.Names.FirstOrDefault(n => n.Value.ToLower().Contains(name))?.Value,
-                Formula = x.Formula,
-                Categories = GetCategoryList(x.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray(),
-                Synonyms = x.Names.Select(n => n.Value).Take(12).ToArray(),
-                Scheme = x.Scheme.Select(s => s.Value.HtmlDecode()).FirstOrDefault(),
-                Id = x.Id
-
+                var substance = new SubstancePreview(); 
+                var substanceName = x.Names.FirstOrDefault(n => n.Value.ToLower().Contains(name));
+                substance.Name = substanceName == null ? null : substanceName.Value;
+                substance.Formula = x.Formula;
+                substance.Categories = GetCategoryList(x.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray();
+                substance.Synonyms = x.Names.Select(n => n.Value).Take(12).ToArray();
+                substance.Scheme = x.Scheme.Select(s => s.Value.HtmlDecode()).FirstOrDefault();
+                substance.Id = x.Id;
+                return substance;
             }).ToList();
             return result;
         }
@@ -105,27 +107,28 @@ namespace Chem
                 return;
             }
 
-            var uuu = s.TakeWhile(x => x.IsNumeric());
-            if (uuu != null && uuu.Any())
+            var dgtArray = s.TakeWhile(x => x.IsNumeric());
+            if (dgtArray != null && dgtArray.Any())
             {
-                var ttt = uuu.Select(x => x.ToString()).Aggregate((s1, s2) => s1 + s2);
-                res += ttt;
-                CombineFormulaVariants(s.Substring(ttt.Length), elements, res);
+                var elemCount = dgtArray.Select(x => x.ToString()).Aggregate((s1, s2) => s1 + s2);
+                res += elemCount;
+                CombineFormulaVariants(s.Substring(elemCount.Length), elements, res);
             }
             else
             {
                 var error = 0;
-                var ttt = s.Substring(0, 1);
-                if (elements.Contains(ttt))
-                    CombineFormulaVariants(s.Substring(1), elements, res + ttt.ToUpper());
+                var elementOneLetter = s.Substring(0, 1);
+                if (elements.Contains(elementOneLetter))
+                    CombineFormulaVariants(s.Substring(1), elements, res + elementOneLetter.ToUpper());
                 else
                     ++error;
 
                 if (s.Length > 1)
                 {
-                    ttt = s.Substring(0, 2);
-                    if (elements.Contains(ttt))
-                        CombineFormulaVariants(s.Substring(2), elements, res + ttt.Substring(0, 1).ToUpper() + ttt.Substring(1));
+                    var elementTwoLetters = s.Substring(0, 2);
+                    if (elements.Contains(elementTwoLetters))
+                        CombineFormulaVariants(s.Substring(2), elements, res
+                            + elementTwoLetters.Substring(0, 1).ToUpper() + elementTwoLetters.Substring(1));
                     else
                         ++error;
                 }
