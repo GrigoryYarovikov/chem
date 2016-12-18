@@ -1,4 +1,5 @@
 ﻿using Xunit;
+using System.Linq;
 
 namespace Chem.Tests
 {
@@ -532,7 +533,7 @@ namespace Chem.Tests
             public void GetByEqualFormulasTest()
             {
                 const string Formula = "C2H5OH";
-                const string extendedFormula = "C4H10O2H2";
+                const string extendedFormula = "2C2H5OH";
                 const string foldedFormula = "C2H6O";
                 var service = new SubstancesService();
                 var model = new Models.Search.QueryModel();
@@ -547,8 +548,8 @@ namespace Chem.Tests
                 var resultByFoldedFormula = service.GetByQuery(model);
 
                 Assert.True(resultByFormula.Count > 0);
-                Assert.True(resultByFormula.Equals(resultByExtendedFormula));
-                Assert.True(resultByFormula.Equals(resultByFoldedFormula));
+                Assert.True(resultByFormula.Select(x => x.Id).SequenceEqual(resultByExtendedFormula.Select(x => x.Id)));
+                Assert.True(resultByFormula.Select(x => x.Id).SequenceEqual(resultByFoldedFormula.Select(x => x.Id)));
             }
             #endregion // GetByFormulaTests
 
