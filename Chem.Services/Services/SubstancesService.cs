@@ -49,12 +49,11 @@ namespace Chem
 
             var name = "";
             qToDb = BuildQuery(qToDb, query, out name);
-
+            name = name.ToLower();
             var list = qToDb.Take(100).ToList();
-
             var result = list.Select(x => new SubstancePreview 
             {
-                Name = x.Names.FirstOrDefault(n => n.Value.ToLower().Contains(name)).Value,
+                Name = x.Names.FirstOrDefault(n => n.Value.ToLower().Contains(name))?.Value,
                 Formula = x.Formula,
                 Categories = GetCategoryList(x.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray(),
                 Synonyms = x.Names.Select(n => n.Value).Take(12).ToArray(),
