@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chem.Services.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Chem.Fakes.ShimLoadPageService">
+            <summary>Shim type of Chem.LoadPageService</summary>
+        </member>
+        <member name="M:Chem.Fakes.ShimLoadPageService.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Fakes.ShimLoadPageService.#ctor(Chem.LoadPageService)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Fakes.ShimLoadPageService.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Fakes.ShimLoadPageService.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService.Constructor">
+            <summary>Sets the shim of LoadPageService.LoadPageService()</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService.GetWebPageAsStringString">
+            <summary>Sets the shim of LoadPageService.GetWebPageAsString(String url)</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService.LoadReactionListStringBoolean">
+            <summary>Sets the shim of LoadPageService.LoadReactionList(String q, Boolean organic)</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService._LoadReactionListb__2IDomObject">
+            <summary>Sets the shim of LoadPageService.&lt;LoadReactionList&gt;b__2(IDomObject x)</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService._LoadReactionListb__3IDomObject">
+            <summary>Sets the shim of LoadPageService.&lt;LoadReactionList&gt;b__3(IDomObject x)</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService._LoadReactionListb__4IDomObject">
+            <summary>Sets the shim of LoadPageService.&lt;LoadReactionList&gt;b__4(IDomObject x)</summary>
+        </member>
+        <member name="P:Chem.Fakes.ShimLoadPageService._LoadReactionListb__5IDomObject">
+            <summary>Sets the shim of LoadPageService.&lt;LoadReactionList&gt;b__5(IDomObject x)</summary>
+        </member>
+        <member name="T:Chem.Fakes.ShimLoadPageService.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Chem.Fakes.StubLoadPageService">
+            <summary>Stub type of Chem.LoadPageService</summary>
+        </member>
+        <member name="M:Chem.Fakes.StubLoadPageService.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Fakes.StubLoadPageService.InitializeStub">
+            <summary>Initializes a new instance of type StubLoadPageService</summary>
+        </member>
+        <member name="P:Chem.Fakes.StubLoadPageService.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Fakes.StubLoadPageService.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Fakes.StubLoadPageService.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Chem.Services.Services.Fakes.ShimSubstancesService">
+            <summary>Shim type of Chem.Services.Services.SubstancesService</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.ShimSubstancesService.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.ShimSubstancesService.#ctor(Chem.Services.Services.SubstancesService)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.ShimSubstancesService.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.ShimSubstancesService.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.ShimSubstancesService.Bind(Chem.Services.Services.ISubstancesService)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.BFormulaOrNullString">
+            <summary>Sets the shim of SubstancesService.BFormulaOrNull(String s)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.BuildQueryIQueryableOfSubstanceQueryModelStringOut">
+            <summary>Sets the shim of SubstancesService.BuildQuery(IQueryable`1&lt;Substance&gt; set, QueryModel q, String&amp; name)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.CombineFormulaVariantsStringListOfStringString">
+            <summary>Sets the shim of SubstancesService.CombineFormulaVariants(String s, List`1&lt;String&gt; elements, String res)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.ConstructorISubstanceManager">
+            <summary>Sets the shim of SubstancesService.SubstancesService(ISubstanceManager iSubstanceManager)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.FormulaToBruttoString">
+            <summary>Sets the shim of SubstancesService.FormulaToBrutto(String formula)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.GetByIdInt32">
+            <summary>Sets the shim of SubstancesService.GetById(Int32 id)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.GetByQueryQueryModel">
+            <summary>Sets the shim of SubstancesService.GetByQuery(QueryModel query)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.GetCategoryListIEnumerableOfCategory">
+            <summary>Sets the shim of SubstancesService.GetCategoryList(IEnumerable`1&lt;Category&gt; catList)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.GetElementStringString">
+            <summary>Sets the shim of SubstancesService.GetElement(String name, String num)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.GetReactionListInt32">
+            <summary>Sets the shim of SubstancesService.GetReactionList(Int32 id)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.ParseFormulaString">
+            <summary>Sets the shim of SubstancesService.ParseFormula(String formula)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.WaterBoolToStrNullableOfBoolean">
+            <summary>Sets the shim of SubstancesService.WaterBoolToStr(Nullable`1&lt;Boolean&gt; b)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._BFormulaOrNullb__1dElement">
+            <summary>Sets the shim of SubstancesService.&lt;BFormulaOrNull&gt;b__1d(Element x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._BFormulaOrNullb__1eString">
+            <summary>Sets the shim of SubstancesService.&lt;BFormulaOrNull&gt;b__1e(String x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._CombineFormulaVariantsb__17Char">
+            <summary>Sets the shim of SubstancesService.&lt;CombineFormulaVariants&gt;b__17(Char x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._CombineFormulaVariantsb__18Char">
+            <summary>Sets the shim of SubstancesService.&lt;CombineFormulaVariants&gt;b__18(Char x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._CombineFormulaVariantsb__19StringString">
+            <summary>Sets the shim of SubstancesService.&lt;CombineFormulaVariants&gt;b__19(String s1, String s2)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._FormulaToBruttob__20KeyValuePairOfStringInt32">
+            <summary>Sets the shim of SubstancesService.&lt;FormulaToBrutto&gt;b__20(KeyValuePair`2&lt;String,Int32&gt; x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._FormulaToBruttob__21KeyValuePairOfStringInt32">
+            <summary>Sets the shim of SubstancesService.&lt;FormulaToBrutto&gt;b__21(KeyValuePair`2&lt;String,Int32&gt; x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._FormulaToBruttob__22StringString">
+            <summary>Sets the shim of SubstancesService.&lt;FormulaToBrutto&gt;b__22(String x, String y)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._GetByIdb__1Category">
+            <summary>Sets the shim of SubstancesService.&lt;GetById&gt;b__1(Category c)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._GetByIdb__2Category">
+            <summary>Sets the shim of SubstancesService.&lt;GetById&gt;b__2(Category c)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._GetByIdb__3SubstanceName">
+            <summary>Sets the shim of SubstancesService.&lt;GetById&gt;b__3(SubstanceName x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._GetByIdb__4SubstanceScheme">
+            <summary>Sets the shim of SubstancesService.&lt;GetById&gt;b__4(SubstanceScheme x)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService._GetReactionListb__15String">
+            <summary>Sets the shim of SubstancesService.&lt;GetReactionList&gt;b__15(String x)</summary>
+        </member>
+        <member name="T:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.BFormulaOrNullString">
+            <summary>Sets the shim of SubstancesService.BFormulaOrNull(String s)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.BuildQueryIQueryableOfSubstanceQueryModelStringOut">
+            <summary>Sets the shim of SubstancesService.BuildQuery(IQueryable`1&lt;Substance&gt; set, QueryModel q, String&amp; name)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.CombineFormulaVariantsStringListOfStringString">
+            <summary>Sets the shim of SubstancesService.CombineFormulaVariants(String s, List`1&lt;String&gt; elements, String res)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.FormulaToBruttoString">
+            <summary>Sets the shim of SubstancesService.FormulaToBrutto(String formula)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.GetByIdInt32">
+            <summary>Sets the shim of SubstancesService.GetById(Int32 id)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.GetByQueryQueryModel">
+            <summary>Sets the shim of SubstancesService.GetByQuery(QueryModel query)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.GetCategoryListIEnumerableOfCategory">
+            <summary>Sets the shim of SubstancesService.GetCategoryList(IEnumerable`1&lt;Category&gt; catList)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.GetElementStringString">
+            <summary>Sets the shim of SubstancesService.GetElement(String name, String num)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.GetReactionListInt32">
+            <summary>Sets the shim of SubstancesService.GetReactionList(Int32 id)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.ParseFormulaString">
+            <summary>Sets the shim of SubstancesService.ParseFormula(String formula)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances.WaterBoolToStrNullableOfBoolean">
+            <summary>Sets the shim of SubstancesService.WaterBoolToStr(Nullable`1&lt;Boolean&gt; b)</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.ShimSubstancesService.AllInstances._BFormulaOrNullb__1eString">
+            <summary>Sets the shim of SubstancesService.&lt;BFormulaOrNull&gt;b__1e(String x)</summary>
+        </member>
+        <member name="T:Chem.Services.Services.Fakes.StubISubstancesService">
+            <summary>Stub type of Chem.Services.Services.ISubstancesService</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.StubISubstancesService.#ctor">
+            <summary>Initializes a new instance of type StubISubstancesService</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.StubISubstancesService.cs::Chem#Services#Services#ISubstancesService#GetById(System.Int32)">
+            <summary>Sets the stub of ISubstancesService.GetById(Int32 id)</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.StubISubstancesService.cs::Chem#Services#Services#ISubstancesService#GetByQuery(Chem.Models.Search.QueryModel)">
+            <summary>Sets the stub of ISubstancesService.GetByQuery(QueryModel query)</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.StubISubstancesService.cs::Chem#Services#Services#ISubstancesService#GetReactionList(System.Int32)">
+            <summary>Sets the stub of ISubstancesService.GetReactionList(Int32 id)</summary>
+        </member>
+        <member name="F:Chem.Services.Services.Fakes.StubISubstancesService.GetByIdInt32">
+            <summary>Sets the stub of ISubstancesService.GetById(Int32 id)</summary>
+        </member>
+        <member name="F:Chem.Services.Services.Fakes.StubISubstancesService.GetByQueryQueryModel">
+            <summary>Sets the stub of ISubstancesService.GetByQuery(QueryModel query)</summary>
+        </member>
+        <member name="F:Chem.Services.Services.Fakes.StubISubstancesService.GetReactionListInt32">
+            <summary>Sets the stub of ISubstancesService.GetReactionList(Int32 id)</summary>
+        </member>
+        <member name="T:Chem.Services.Services.Fakes.StubSubstancesService">
+            <summary>Stub type of Chem.Services.Services.SubstancesService</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.StubSubstancesService.#ctor(Chem.Managers.ISubstanceManager)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Services.Services.Fakes.StubSubstancesService.InitializeStub">
+            <summary>Initializes a new instance of type StubSubstancesService</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.StubSubstancesService.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.StubSubstancesService.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Services.Services.Fakes.StubSubstancesService.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

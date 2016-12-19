@@ -1,0 +1,1439 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>database.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Chem.DataContext.Fakes.ShimChemContext">
+            <summary>Shim type of Chem.DataContext.ChemContext</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.ShimChemContext.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.ShimChemContext.#ctor(Chem.DataContext.ChemContext)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.ShimChemContext.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.ShimChemContext.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.ShimChemContext.Bind(System.Data.Entity.Infrastructure.IObjectContextAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.ShimChemContext.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.CategoriesGet">
+            <summary>Sets the shim of ChemContext.get_Categories()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.CategoriesSetDbSetOfCategory">
+            <summary>Sets the shim of ChemContext.set_Categories(DbSet`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.Constructor">
+            <summary>Sets the shim of ChemContext.ChemContext()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.Create">
+            <summary>Sets the shim of ChemContext.Create()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.Dispose">
+            <summary>Sets the shim of ChemContext.Dispose()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.ElementsGet">
+            <summary>Sets the shim of ChemContext.get_Elements()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.ElementsSetDbSetOfElement">
+            <summary>Sets the shim of ChemContext.set_Elements(DbSet`1&lt;Element&gt; value)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.OnModelCreatingDbModelBuilder">
+            <summary>Sets the shim of ChemContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.SubstancesGet">
+            <summary>Sets the shim of ChemContext.get_Substances()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.SubstancesSetDbSetOfSubstance">
+            <summary>Sets the shim of ChemContext.set_Substances(DbSet`1&lt;Substance&gt; value)</summary>
+        </member>
+        <member name="T:Chem.DataContext.Fakes.ShimChemContext.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.CategoriesGet">
+            <summary>Sets the shim of ChemContext.get_Categories()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.CategoriesSetDbSetOfCategory">
+            <summary>Sets the shim of ChemContext.set_Categories(DbSet`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.Dispose">
+            <summary>Sets the shim of ChemContext.Dispose()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.ElementsGet">
+            <summary>Sets the shim of ChemContext.get_Elements()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.ElementsSetDbSetOfElement">
+            <summary>Sets the shim of ChemContext.set_Elements(DbSet`1&lt;Element&gt; value)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.OnModelCreatingDbModelBuilder">
+            <summary>Sets the shim of ChemContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.SubstancesGet">
+            <summary>Sets the shim of ChemContext.get_Substances()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.ShimChemContext.AllInstances.SubstancesSetDbSetOfSubstance">
+            <summary>Sets the shim of ChemContext.set_Substances(DbSet`1&lt;Substance&gt; value)</summary>
+        </member>
+        <member name="T:Chem.DataContext.Fakes.StubChemContext">
+            <summary>Stub type of Chem.DataContext.ChemContext</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.AttachBackingFieldToRoles">
+            <summary>Attaches delegates to emulate StubChemContext.Roles as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.AttachBackingFieldToUsers">
+            <summary>Attaches delegates to emulate StubChemContext.Users as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.Dispose(System.Boolean)">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.DisposeBoolean">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.Equals(System.Object)">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.EqualsObject">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.GetHashCode">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.GetHashCode01">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.InitializeStub">
+            <summary>Initializes a new instance of type StubChemContext</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>Sets the stub of ChemContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.OnModelCreatingDbModelBuilder">
+            <summary>Sets the stub of ChemContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.RolesGet">
+            <summary>Sets the stub of IdentityDbContext`6.get_Roles()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.RolesSetIDbSetOfIdentityRole">
+            <summary>Sets the stub of IdentityDbContext`6.set_Roles(IDbSet`1&lt;!1&gt; value)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.SaveChanges">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.SaveChanges01">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.SaveChangesAsync">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.SaveChangesAsync01">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.SaveChangesAsyncCancellationToken">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.Set(System.Type)">
+            <summary>Sets the stub of DbContext.Set(Type entityType)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.Set``1">
+            <summary>Sets the stub of DbContext.Set()</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.SetOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Data.Entity.DbSet{``0}})">
+            <summary>Sets stubs of Set()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.SetType">
+            <summary>Sets the stub of DbContext.Set(Type entityType)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.ShouldValidateEntityDbEntityEntry">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.ToString">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.ToString01">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.UsersGet">
+            <summary>Sets the stub of IdentityDbContext`6.get_Users()</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.UsersSetIDbSetOfApplicationUser">
+            <summary>Sets the stub of IdentityDbContext`6.set_Users(IDbSet`1&lt;!0&gt; value)</summary>
+        </member>
+        <member name="M:Chem.DataContext.Fakes.StubChemContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+            <summary>Sets the stub of IdentityDbContext`6.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="F:Chem.DataContext.Fakes.StubChemContext.ValidateEntityDbEntityEntryIDictionaryOfObjectObject">
+            <summary>Sets the stub of IdentityDbContext`6.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.StubChemContext.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.StubChemContext.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.StubChemContext.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.StubChemContext.Roles">
+            <summary>Sets the stub of IdentityDbContext`6.get_Roles()</summary>
+        </member>
+        <member name="P:Chem.DataContext.Fakes.StubChemContext.Users">
+            <summary>Sets the stub of IdentityDbContext`6.get_Users()</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.ShimCategoryManager">
+            <summary>Shim type of Chem.Managers.CategoryManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimCategoryManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimCategoryManager.#ctor(Chem.Managers.CategoryManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimCategoryManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimCategoryManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.AddManyIEnumerableOfCategory">
+            <summary>Sets the shim of CategoryManager.AddMany(IEnumerable`1&lt;Category&gt; set)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.Constructor">
+            <summary>Sets the shim of CategoryManager.CategoryManager()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.ConstructorDbContext">
+            <summary>Sets the shim of CategoryManager.CategoryManager(DbContext context)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.GetAll">
+            <summary>Sets the shim of CategoryManager.GetAll()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.GetContext">
+            <summary>Sets the shim of CategoryManager.GetContext()</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.ShimCategoryManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.AllInstances.AddManyIEnumerableOfCategory">
+            <summary>Sets the shim of CategoryManager.AddMany(IEnumerable`1&lt;Category&gt; set)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.AllInstances.GetAll">
+            <summary>Sets the shim of CategoryManager.GetAll()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimCategoryManager.AllInstances.GetContext">
+            <summary>Sets the shim of CategoryManager.GetContext()</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.ShimElementManager">
+            <summary>Shim type of Chem.Managers.ElementManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimElementManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimElementManager.#ctor(Chem.Managers.ElementManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimElementManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimElementManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimElementManager.Bind(Chem.Managers.IElementManager)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.AddManyIEnumerableOfElement">
+            <summary>Sets the shim of ElementManager.AddMany(IEnumerable`1&lt;Element&gt; elements)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.Constructor">
+            <summary>Sets the shim of ElementManager.ElementManager()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.ConstructorDbContext">
+            <summary>Sets the shim of ElementManager.ElementManager(DbContext context)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.GetAll">
+            <summary>Sets the shim of ElementManager.GetAll()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.GetBySignString">
+            <summary>Sets the shim of ElementManager.GetBySign(String sign)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.GetContext">
+            <summary>Sets the shim of ElementManager.GetContext()</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.ShimElementManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.AllInstances.AddManyIEnumerableOfElement">
+            <summary>Sets the shim of ElementManager.AddMany(IEnumerable`1&lt;Element&gt; elements)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.AllInstances.GetAll">
+            <summary>Sets the shim of ElementManager.GetAll()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.AllInstances.GetBySignString">
+            <summary>Sets the shim of ElementManager.GetBySign(String sign)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimElementManager.AllInstances.GetContext">
+            <summary>Sets the shim of ElementManager.GetContext()</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.ShimSubstanceManager">
+            <summary>Shim type of Chem.Managers.SubstanceManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimSubstanceManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimSubstanceManager.#ctor(Chem.Managers.SubstanceManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimSubstanceManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimSubstanceManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.ShimSubstanceManager.Bind(Chem.Managers.ISubstanceManager)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AddManyIEnumerableOfSubstance">
+            <summary>Sets the shim of SubstanceManager.AddMany(IEnumerable`1&lt;Substance&gt; substances)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.Constructor">
+            <summary>Sets the shim of SubstanceManager.SubstanceManager()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.ConstructorDbContext">
+            <summary>Sets the shim of SubstanceManager.SubstanceManager(DbContext context)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.GetAll">
+            <summary>Sets the shim of SubstanceManager.GetAll()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.GetByFormulaString">
+            <summary>Sets the shim of SubstanceManager.GetByFormula(String formula)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.GetByIdInt32">
+            <summary>Sets the shim of SubstanceManager.GetById(Int32 id)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.GetByNameString">
+            <summary>Sets the shim of SubstanceManager.GetByName(String name)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.GetContext">
+            <summary>Sets the shim of SubstanceManager.GetContext()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.GetSeveralInt32">
+            <summary>Sets the shim of SubstanceManager.GetSeveral(Int32 count)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.UpdateAllDictionaryOfInt32Substance">
+            <summary>Sets the shim of SubstanceManager.UpdateAll(Dictionary`2&lt;Int32,Substance&gt; dic)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.UpdateSubstance">
+            <summary>Sets the shim of SubstanceManager.Update(Substance s)</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.AddManyIEnumerableOfSubstance">
+            <summary>Sets the shim of SubstanceManager.AddMany(IEnumerable`1&lt;Substance&gt; substances)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.GetAll">
+            <summary>Sets the shim of SubstanceManager.GetAll()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.GetByFormulaString">
+            <summary>Sets the shim of SubstanceManager.GetByFormula(String formula)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.GetByIdInt32">
+            <summary>Sets the shim of SubstanceManager.GetById(Int32 id)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.GetByNameString">
+            <summary>Sets the shim of SubstanceManager.GetByName(String name)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.GetContext">
+            <summary>Sets the shim of SubstanceManager.GetContext()</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.GetSeveralInt32">
+            <summary>Sets the shim of SubstanceManager.GetSeveral(Int32 count)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.UpdateAllDictionaryOfInt32Substance">
+            <summary>Sets the shim of SubstanceManager.UpdateAll(Dictionary`2&lt;Int32,Substance&gt; dic)</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.ShimSubstanceManager.AllInstances.UpdateSubstance">
+            <summary>Sets the shim of SubstanceManager.Update(Substance s)</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.StubCategoryManager">
+            <summary>Stub type of Chem.Managers.CategoryManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubCategoryManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubCategoryManager.#ctor(System.Data.Entity.DbContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubCategoryManager.InitializeStub">
+            <summary>Initializes a new instance of type StubCategoryManager</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubCategoryManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubCategoryManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubCategoryManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.StubElementManager">
+            <summary>Stub type of Chem.Managers.ElementManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubElementManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubElementManager.#ctor(System.Data.Entity.DbContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubElementManager.InitializeStub">
+            <summary>Initializes a new instance of type StubElementManager</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubElementManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubElementManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubElementManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.StubIElementManager">
+            <summary>Stub type of Chem.Managers.IElementManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubIElementManager.#ctor">
+            <summary>Initializes a new instance of type StubIElementManager</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubIElementManager.AddManyIEnumerableOfElement">
+            <summary>Sets the stub of IElementManager.AddMany(IEnumerable`1&lt;Element&gt; elements)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubIElementManager.d::Chem#Managers#IElementManager#AddMany(System.Collections.Generic.IEnumerable{Chem.Models.Element})">
+            <summary>Sets the stub of IElementManager.AddMany(IEnumerable`1&lt;Element&gt; elements)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubIElementManager.d::Chem#Managers#IElementManager#GetAll">
+            <summary>Sets the stub of IElementManager.GetAll()</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubIElementManager.d::Chem#Managers#IElementManager#GetBySign(System.String)">
+            <summary>Sets the stub of IElementManager.GetBySign(String sign)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubIElementManager.d::Chem#Managers#IElementManager#GetContext">
+            <summary>Sets the stub of IElementManager.GetContext()</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubIElementManager.GetAll">
+            <summary>Sets the stub of IElementManager.GetAll()</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubIElementManager.GetBySignString">
+            <summary>Sets the stub of IElementManager.GetBySign(String sign)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubIElementManager.GetContext">
+            <summary>Sets the stub of IElementManager.GetContext()</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.StubISubstanceManager">
+            <summary>Stub type of Chem.Managers.ISubstanceManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.#ctor">
+            <summary>Initializes a new instance of type StubISubstanceManager</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.AddManyIEnumerableOfSubstance">
+            <summary>Sets the stub of ISubstanceManager.AddMany(IEnumerable`1&lt;Substance&gt; substances)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#AddMany(System.Collections.Generic.IEnumerable{Chem.Models.Substance})">
+            <summary>Sets the stub of ISubstanceManager.AddMany(IEnumerable`1&lt;Substance&gt; substances)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#GetAll">
+            <summary>Sets the stub of ISubstanceManager.GetAll()</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#GetByFormula(System.String)">
+            <summary>Sets the stub of ISubstanceManager.GetByFormula(String formula)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#GetById(System.Int32)">
+            <summary>Sets the stub of ISubstanceManager.GetById(Int32 id)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#GetByName(System.String)">
+            <summary>Sets the stub of ISubstanceManager.GetByName(String name)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#GetContext">
+            <summary>Sets the stub of ISubstanceManager.GetContext()</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#GetSeveral(System.Int32)">
+            <summary>Sets the stub of ISubstanceManager.GetSeveral(Int32 count)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#Update(Chem.Models.Substance)">
+            <summary>Sets the stub of ISubstanceManager.Update(Substance s)</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubISubstanceManager.d::Chem#Managers#ISubstanceManager#UpdateAll(System.Collections.Generic.Dictionary{System.Int32,Chem.Models.Substance})">
+            <summary>Sets the stub of ISubstanceManager.UpdateAll(Dictionary`2&lt;Int32,Substance&gt; dic)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.GetAll">
+            <summary>Sets the stub of ISubstanceManager.GetAll()</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.GetByFormulaString">
+            <summary>Sets the stub of ISubstanceManager.GetByFormula(String formula)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.GetByIdInt32">
+            <summary>Sets the stub of ISubstanceManager.GetById(Int32 id)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.GetByNameString">
+            <summary>Sets the stub of ISubstanceManager.GetByName(String name)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.GetContext">
+            <summary>Sets the stub of ISubstanceManager.GetContext()</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.GetSeveralInt32">
+            <summary>Sets the stub of ISubstanceManager.GetSeveral(Int32 count)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.UpdateAllDictionaryOfInt32Substance">
+            <summary>Sets the stub of ISubstanceManager.UpdateAll(Dictionary`2&lt;Int32,Substance&gt; dic)</summary>
+        </member>
+        <member name="F:Chem.Managers.Fakes.StubISubstanceManager.UpdateSubstance">
+            <summary>Sets the stub of ISubstanceManager.Update(Substance s)</summary>
+        </member>
+        <member name="T:Chem.Managers.Fakes.StubSubstanceManager">
+            <summary>Stub type of Chem.Managers.SubstanceManager</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubSubstanceManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubSubstanceManager.#ctor(System.Data.Entity.DbContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Managers.Fakes.StubSubstanceManager.InitializeStub">
+            <summary>Initializes a new instance of type StubSubstanceManager</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubSubstanceManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubSubstanceManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Managers.Fakes.StubSubstanceManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimApplicationUser">
+            <summary>Shim type of Chem.Models.ApplicationUser</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimApplicationUser.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimApplicationUser.#ctor(Chem.Models.ApplicationUser)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimApplicationUser.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimApplicationUser.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimApplicationUser.Bind(Microsoft.AspNet.Identity.IUser)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimApplicationUser.Bind(Microsoft.AspNet.Identity.IUser{System.String})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimApplicationUser.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimApplicationUser.Constructor">
+            <summary>Sets the shim of ApplicationUser.ApplicationUser()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimApplicationUser.GenerateUserIdentityAsyncUserManagerOfApplicationUserString">
+            <summary>Sets the shim of ApplicationUser.GenerateUserIdentityAsync(UserManager`1&lt;ApplicationUser&gt; manager, String authenticationType)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimApplicationUser.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimApplicationUser.AllInstances.GenerateUserIdentityAsyncUserManagerOfApplicationUserString">
+            <summary>Sets the shim of ApplicationUser.GenerateUserIdentityAsync(UserManager`1&lt;ApplicationUser&gt; manager, String authenticationType)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimCategory">
+            <summary>Shim type of Chem.Models.Category</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimCategory.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimCategory.#ctor(Chem.Models.Category)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimCategory.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimCategory.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.Constructor">
+            <summary>Sets the shim of Category.Category()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.IdGet">
+            <summary>Sets the shim of Category.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.IdSetInt32">
+            <summary>Sets the shim of Category.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.NameGet">
+            <summary>Sets the shim of Category.get_Name()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.NameSetString">
+            <summary>Sets the shim of Category.set_Name(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.ParentsGet">
+            <summary>Sets the shim of Category.get_Parents()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.ParentsSetListOfCategory">
+            <summary>Sets the shim of Category.set_Parents(List`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimCategory.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.AllInstances.IdGet">
+            <summary>Sets the shim of Category.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.AllInstances.IdSetInt32">
+            <summary>Sets the shim of Category.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.AllInstances.NameGet">
+            <summary>Sets the shim of Category.get_Name()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.AllInstances.NameSetString">
+            <summary>Sets the shim of Category.set_Name(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.AllInstances.ParentsGet">
+            <summary>Sets the shim of Category.get_Parents()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimCategory.AllInstances.ParentsSetListOfCategory">
+            <summary>Sets the shim of Category.set_Parents(List`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimElement">
+            <summary>Shim type of Chem.Models.Element</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimElement.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimElement.#ctor(Chem.Models.Element)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimElement.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimElement.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.Constructor">
+            <summary>Sets the shim of Element.Element()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.IdGet">
+            <summary>Sets the shim of Element.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.IdSetInt32">
+            <summary>Sets the shim of Element.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.NameGet">
+            <summary>Sets the shim of Element.get_Name()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.NameSetString">
+            <summary>Sets the shim of Element.set_Name(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.SignGet">
+            <summary>Sets the shim of Element.get_Sign()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.SignSetString">
+            <summary>Sets the shim of Element.set_Sign(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.WeightGet">
+            <summary>Sets the shim of Element.get_Weight()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.WeightSetDouble">
+            <summary>Sets the shim of Element.set_Weight(Double value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimElement.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.IdGet">
+            <summary>Sets the shim of Element.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.IdSetInt32">
+            <summary>Sets the shim of Element.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.NameGet">
+            <summary>Sets the shim of Element.get_Name()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.NameSetString">
+            <summary>Sets the shim of Element.set_Name(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.SignGet">
+            <summary>Sets the shim of Element.get_Sign()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.SignSetString">
+            <summary>Sets the shim of Element.set_Sign(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.WeightGet">
+            <summary>Sets the shim of Element.get_Weight()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimElement.AllInstances.WeightSetDouble">
+            <summary>Sets the shim of Element.set_Weight(Double value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimSubstance">
+            <summary>Shim type of Chem.Models.Substance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstance.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstance.#ctor(Chem.Models.Substance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstance.Bind(System.IComparable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.BoilingPointGet">
+            <summary>Sets the shim of Substance.get_BoilingPoint()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.BoilingPointSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_BoilingPoint(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.CASGet">
+            <summary>Sets the shim of Substance.get_CAS()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.CASSetString">
+            <summary>Sets the shim of Substance.set_CAS(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.CategoriesGet">
+            <summary>Sets the shim of Substance.get_Categories()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.CategoriesSetListOfCategory">
+            <summary>Sets the shim of Substance.set_Categories(List`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.CompareToObject">
+            <summary>Sets the shim of Substance.CompareTo(Object obj)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.Constructor">
+            <summary>Sets the shim of Substance.Substance()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.DensityGet">
+            <summary>Sets the shim of Substance.get_Density()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.DensitySetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_Density(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.FlashPointGet">
+            <summary>Sets the shim of Substance.get_FlashPoint()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.FlashPointSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_FlashPoint(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.FormulaGet">
+            <summary>Sets the shim of Substance.get_Formula()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.FormulaSetString">
+            <summary>Sets the shim of Substance.set_Formula(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.HazardSymbolsGet">
+            <summary>Sets the shim of Substance.get_HazardSymbols()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.HazardSymbolsSetString">
+            <summary>Sets the shim of Substance.set_HazardSymbols(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.IdGet">
+            <summary>Sets the shim of Substance.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.IdSetInt32">
+            <summary>Sets the shim of Substance.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.MeltingPointGet">
+            <summary>Sets the shim of Substance.get_MeltingPoint()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.MeltingPointSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_MeltingPoint(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.NamesGet">
+            <summary>Sets the shim of Substance.get_Names()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.NamesSetListOfSubstanceName">
+            <summary>Sets the shim of Substance.set_Names(List`1&lt;SubstanceName&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.RefractiveIndexGet">
+            <summary>Sets the shim of Substance.get_RefractiveIndex()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.RefractiveIndexSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_RefractiveIndex(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.SchemeGet">
+            <summary>Sets the shim of Substance.get_Scheme()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.SchemeSetListOfSubstanceScheme">
+            <summary>Sets the shim of Substance.set_Scheme(List`1&lt;SubstanceScheme&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.VapourPressurGet">
+            <summary>Sets the shim of Substance.get_VapourPressur()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.VapourPressurSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_VapourPressur(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.WaterSolubilityGet">
+            <summary>Sets the shim of Substance.get_WaterSolubility()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.WaterSolubilitySetNullableOfBoolean">
+            <summary>Sets the shim of Substance.set_WaterSolubility(Nullable`1&lt;Boolean&gt; value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimSubstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.BoilingPointGet">
+            <summary>Sets the shim of Substance.get_BoilingPoint()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.BoilingPointSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_BoilingPoint(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.CASGet">
+            <summary>Sets the shim of Substance.get_CAS()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.CASSetString">
+            <summary>Sets the shim of Substance.set_CAS(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.CategoriesGet">
+            <summary>Sets the shim of Substance.get_Categories()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.CategoriesSetListOfCategory">
+            <summary>Sets the shim of Substance.set_Categories(List`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.CompareToObject">
+            <summary>Sets the shim of Substance.CompareTo(Object obj)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.DensityGet">
+            <summary>Sets the shim of Substance.get_Density()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.DensitySetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_Density(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.FlashPointGet">
+            <summary>Sets the shim of Substance.get_FlashPoint()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.FlashPointSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_FlashPoint(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.FormulaGet">
+            <summary>Sets the shim of Substance.get_Formula()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.FormulaSetString">
+            <summary>Sets the shim of Substance.set_Formula(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.HazardSymbolsGet">
+            <summary>Sets the shim of Substance.get_HazardSymbols()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.HazardSymbolsSetString">
+            <summary>Sets the shim of Substance.set_HazardSymbols(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.IdGet">
+            <summary>Sets the shim of Substance.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.IdSetInt32">
+            <summary>Sets the shim of Substance.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.MeltingPointGet">
+            <summary>Sets the shim of Substance.get_MeltingPoint()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.MeltingPointSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_MeltingPoint(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.NamesGet">
+            <summary>Sets the shim of Substance.get_Names()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.NamesSetListOfSubstanceName">
+            <summary>Sets the shim of Substance.set_Names(List`1&lt;SubstanceName&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.RefractiveIndexGet">
+            <summary>Sets the shim of Substance.get_RefractiveIndex()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.RefractiveIndexSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_RefractiveIndex(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.SchemeGet">
+            <summary>Sets the shim of Substance.get_Scheme()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.SchemeSetListOfSubstanceScheme">
+            <summary>Sets the shim of Substance.set_Scheme(List`1&lt;SubstanceScheme&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.VapourPressurGet">
+            <summary>Sets the shim of Substance.get_VapourPressur()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.VapourPressurSetNullableOfDouble">
+            <summary>Sets the shim of Substance.set_VapourPressur(Nullable`1&lt;Double&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.WaterSolubilityGet">
+            <summary>Sets the shim of Substance.get_WaterSolubility()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstance.AllInstances.WaterSolubilitySetNullableOfBoolean">
+            <summary>Sets the shim of Substance.set_WaterSolubility(Nullable`1&lt;Boolean&gt; value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimSubstanceName">
+            <summary>Shim type of Chem.Models.SubstanceName</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceName.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceName.#ctor(Chem.Models.SubstanceName)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceName.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceName.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.Constructor">
+            <summary>Sets the shim of SubstanceName.SubstanceName()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.ConstructorString">
+            <summary>Sets the shim of SubstanceName.SubstanceName(String name)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.IdGet">
+            <summary>Sets the shim of SubstanceName.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.IdSetInt32">
+            <summary>Sets the shim of SubstanceName.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.ValueGet">
+            <summary>Sets the shim of SubstanceName.get_Value()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.ValueSetString">
+            <summary>Sets the shim of SubstanceName.set_Value(String value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimSubstanceName.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.AllInstances.IdGet">
+            <summary>Sets the shim of SubstanceName.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.AllInstances.IdSetInt32">
+            <summary>Sets the shim of SubstanceName.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.AllInstances.ValueGet">
+            <summary>Sets the shim of SubstanceName.get_Value()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceName.AllInstances.ValueSetString">
+            <summary>Sets the shim of SubstanceName.set_Value(String value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimSubstanceScheme">
+            <summary>Shim type of Chem.Models.SubstanceScheme</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceScheme.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceScheme.#ctor(Chem.Models.SubstanceScheme)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceScheme.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.ShimSubstanceScheme.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.Constructor">
+            <summary>Sets the shim of SubstanceScheme.SubstanceScheme()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.ConstructorString">
+            <summary>Sets the shim of SubstanceScheme.SubstanceScheme(String scheme)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.IdGet">
+            <summary>Sets the shim of SubstanceScheme.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.IdSetInt32">
+            <summary>Sets the shim of SubstanceScheme.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.ValueGet">
+            <summary>Sets the shim of SubstanceScheme.get_Value()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.ValueSetString">
+            <summary>Sets the shim of SubstanceScheme.set_Value(String value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.ShimSubstanceScheme.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.AllInstances.IdGet">
+            <summary>Sets the shim of SubstanceScheme.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.AllInstances.IdSetInt32">
+            <summary>Sets the shim of SubstanceScheme.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.AllInstances.ValueGet">
+            <summary>Sets the shim of SubstanceScheme.get_Value()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.ShimSubstanceScheme.AllInstances.ValueSetString">
+            <summary>Sets the shim of SubstanceScheme.set_Value(String value)</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.StubApplicationUser">
+            <summary>Stub type of Chem.Models.ApplicationUser</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.AccessFailedCountGet">
+            <summary>Sets the stub of IdentityUser`4.get_AccessFailedCount()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.AccessFailedCountSetInt32">
+            <summary>Sets the stub of IdentityUser`4.set_AccessFailedCount(Int32 value)</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToAccessFailedCount">
+            <summary>Attaches delegates to emulate StubApplicationUser.AccessFailedCount as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToEmail">
+            <summary>Attaches delegates to emulate StubApplicationUser.Email as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToEmailConfirmed">
+            <summary>Attaches delegates to emulate StubApplicationUser.EmailConfirmed as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToId">
+            <summary>Attaches delegates to emulate StubApplicationUser.Id as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToLockoutEnabled">
+            <summary>Attaches delegates to emulate StubApplicationUser.LockoutEnabled as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToLockoutEndDateUtc">
+            <summary>Attaches delegates to emulate StubApplicationUser.LockoutEndDateUtc as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToPasswordHash">
+            <summary>Attaches delegates to emulate StubApplicationUser.PasswordHash as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToPhoneNumber">
+            <summary>Attaches delegates to emulate StubApplicationUser.PhoneNumber as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToPhoneNumberConfirmed">
+            <summary>Attaches delegates to emulate StubApplicationUser.PhoneNumberConfirmed as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToSecurityStamp">
+            <summary>Attaches delegates to emulate StubApplicationUser.SecurityStamp as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToTwoFactorEnabled">
+            <summary>Attaches delegates to emulate StubApplicationUser.TwoFactorEnabled as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.AttachBackingFieldToUserName">
+            <summary>Attaches delegates to emulate StubApplicationUser.UserName as a property with a backing field.</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.EmailConfirmedGet">
+            <summary>Sets the stub of IdentityUser`4.get_EmailConfirmed()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.EmailConfirmedSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_EmailConfirmed(Boolean value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.EmailGet">
+            <summary>Sets the stub of IdentityUser`4.get_Email()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.EmailSetString">
+            <summary>Sets the stub of IdentityUser`4.set_Email(String value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.IdGet">
+            <summary>Sets the stub of IdentityUser`4.get_Id()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.IdSetString">
+            <summary>Sets the stub of IdentityUser`4.set_Id(!0 value)</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubApplicationUser.InitializeStub">
+            <summary>Initializes a new instance of type StubApplicationUser</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.LockoutEnabledGet">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEnabled()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.LockoutEnabledSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_LockoutEnabled(Boolean value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.LockoutEndDateUtcGet">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEndDateUtc()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.LockoutEndDateUtcSetNullableOfDateTime">
+            <summary>Sets the stub of IdentityUser`4.set_LockoutEndDateUtc(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.PasswordHashGet">
+            <summary>Sets the stub of IdentityUser`4.get_PasswordHash()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.PasswordHashSetString">
+            <summary>Sets the stub of IdentityUser`4.set_PasswordHash(String value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.PhoneNumberConfirmedGet">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumberConfirmed()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.PhoneNumberConfirmedSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_PhoneNumberConfirmed(Boolean value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.PhoneNumberGet">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumber()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.PhoneNumberSetString">
+            <summary>Sets the stub of IdentityUser`4.set_PhoneNumber(String value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.SecurityStampGet">
+            <summary>Sets the stub of IdentityUser`4.get_SecurityStamp()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.SecurityStampSetString">
+            <summary>Sets the stub of IdentityUser`4.set_SecurityStamp(String value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.TwoFactorEnabledGet">
+            <summary>Sets the stub of IdentityUser`4.get_TwoFactorEnabled()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.TwoFactorEnabledSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_TwoFactorEnabled(Boolean value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.UserNameGet">
+            <summary>Sets the stub of IdentityUser`4.get_UserName()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubApplicationUser.UserNameSetString">
+            <summary>Sets the stub of IdentityUser`4.set_UserName(String value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.AccessFailedCount">
+            <summary>Sets the stub of IdentityUser`4.get_AccessFailedCount()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.Email">
+            <summary>Sets the stub of IdentityUser`4.get_Email()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.EmailConfirmed">
+            <summary>Sets the stub of IdentityUser`4.get_EmailConfirmed()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.Id">
+            <summary>Sets the stub of IdentityUser`4.get_Id()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.LockoutEnabled">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEnabled()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.LockoutEndDateUtc">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEndDateUtc()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.PasswordHash">
+            <summary>Sets the stub of IdentityUser`4.get_PasswordHash()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.PhoneNumber">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumber()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.PhoneNumberConfirmed">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumberConfirmed()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.SecurityStamp">
+            <summary>Sets the stub of IdentityUser`4.get_SecurityStamp()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.TwoFactorEnabled">
+            <summary>Sets the stub of IdentityUser`4.get_TwoFactorEnabled()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubApplicationUser.UserName">
+            <summary>Sets the stub of IdentityUser`4.get_UserName()</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.StubCategory">
+            <summary>Stub type of Chem.Models.Category</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubCategory.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubCategory.AttachBackingFieldToParents">
+            <summary>Attaches delegates to emulate StubCategory.Parents as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubCategory.InitializeStub">
+            <summary>Initializes a new instance of type StubCategory</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubCategory.ParentsGet">
+            <summary>Sets the stub of Category.get_Parents()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubCategory.ParentsSetListOfCategory">
+            <summary>Sets the stub of Category.set_Parents(List`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubCategory.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubCategory.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubCategory.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubCategory.Parents">
+            <summary>Sets the stub of Category.get_Parents()</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.StubElement">
+            <summary>Stub type of Chem.Models.Element</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubElement.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubElement.InitializeStub">
+            <summary>Initializes a new instance of type StubElement</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubElement.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubElement.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubElement.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.StubSubstance">
+            <summary>Stub type of Chem.Models.Substance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstance.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstance.AttachBackingFieldToCategories">
+            <summary>Attaches delegates to emulate StubSubstance.Categories as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstance.AttachBackingFieldToNames">
+            <summary>Attaches delegates to emulate StubSubstance.Names as a property with a backing field.</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstance.AttachBackingFieldToScheme">
+            <summary>Attaches delegates to emulate StubSubstance.Scheme as a property with a backing field.</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubSubstance.CategoriesGet">
+            <summary>Sets the stub of Substance.get_Categories()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubSubstance.CategoriesSetListOfCategory">
+            <summary>Sets the stub of Substance.set_Categories(List`1&lt;Category&gt; value)</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstance.InitializeStub">
+            <summary>Initializes a new instance of type StubSubstance</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubSubstance.NamesGet">
+            <summary>Sets the stub of Substance.get_Names()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubSubstance.NamesSetListOfSubstanceName">
+            <summary>Sets the stub of Substance.set_Names(List`1&lt;SubstanceName&gt; value)</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubSubstance.SchemeGet">
+            <summary>Sets the stub of Substance.get_Scheme()</summary>
+        </member>
+        <member name="F:Chem.Models.Fakes.StubSubstance.SchemeSetListOfSubstanceScheme">
+            <summary>Sets the stub of Substance.set_Scheme(List`1&lt;SubstanceScheme&gt; value)</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstance.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstance.Categories">
+            <summary>Sets the stub of Substance.get_Categories()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstance.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstance.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstance.Names">
+            <summary>Sets the stub of Substance.get_Names()</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstance.Scheme">
+            <summary>Sets the stub of Substance.get_Scheme()</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.StubSubstanceName">
+            <summary>Stub type of Chem.Models.SubstanceName</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstanceName.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstanceName.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstanceName.InitializeStub">
+            <summary>Initializes a new instance of type StubSubstanceName</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstanceName.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstanceName.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstanceName.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Chem.Models.Fakes.StubSubstanceScheme">
+            <summary>Stub type of Chem.Models.SubstanceScheme</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstanceScheme.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstanceScheme.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Chem.Models.Fakes.StubSubstanceScheme.InitializeStub">
+            <summary>Initializes a new instance of type StubSubstanceScheme</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstanceScheme.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstanceScheme.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Chem.Models.Fakes.StubSubstanceScheme.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:database.Migrations.Fakes.ShimcategoryFix">
+            <summary>Shim type of database.Migrations.categoryFix</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.ShimcategoryFix.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.ShimcategoryFix.#ctor(database.Migrations.categoryFix)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.ShimcategoryFix.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.ShimcategoryFix.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.ShimcategoryFix.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.ShimcategoryFix.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.Constructor">
+            <summary>Sets the shim of categoryFix.categoryFix()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.Down">
+            <summary>Sets the shim of categoryFix.Down()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of categoryFix.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of categoryFix.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of categoryFix.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.Up">
+            <summary>Sets the shim of categoryFix.Up()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix._Downb__2ColumnBuilder">
+            <summary>Sets the shim of categoryFix.&lt;Down&gt;b__2(ColumnBuilder c)</summary>
+        </member>
+        <member name="T:database.Migrations.Fakes.ShimcategoryFix.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.AllInstances.Down">
+            <summary>Sets the shim of categoryFix.Down()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of categoryFix.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of categoryFix.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of categoryFix.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.ShimcategoryFix.AllInstances.Up">
+            <summary>Sets the shim of categoryFix.Up()</summary>
+        </member>
+        <member name="T:database.Migrations.Fakes.Shiminitial">
+            <summary>Shim type of database.Migrations.initial</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.Shiminitial.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.Shiminitial.#ctor(database.Migrations.initial)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.Shiminitial.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.Shiminitial.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.Shiminitial.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:database.Migrations.Fakes.Shiminitial.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.Constructor">
+            <summary>Sets the shim of initial.initial()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.Down">
+            <summary>Sets the shim of initial.Down()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of initial.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of initial.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of initial.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.Up">
+            <summary>Sets the shim of initial.Up()</summary>
+        </member>
+        <member name="T:database.Migrations.Fakes.Shiminitial.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.AllInstances.Down">
+            <summary>Sets the shim of initial.Down()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of initial.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of initial.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of initial.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:database.Migrations.Fakes.Shiminitial.AllInstances.Up">
+            <summary>Sets the shim of initial.Up()</summary>
+        </member>
+    </members>
+</doc>
