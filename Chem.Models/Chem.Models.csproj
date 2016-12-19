@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Search\FullSubstanceModel.cs" />
+    <Compile Include="Models\Search\IFullSubstanceModel.cs" />
     <Compile Include="Models\Search\QueryModel.cs" />
     <Compile Include="Models\Search\Reaction.cs" />
     <Compile Include="Models\Search\StructureElement.cs" />

@@ -1,12 +1,7 @@
 ﻿using Chem.DataContext;
 using Chem.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Data.Linq;
 using System.Data.Entity;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Chem.Managers
 {

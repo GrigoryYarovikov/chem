@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
-using Chem.Models;
 using Chem.Managers;
 using Newtonsoft.Json;
-using System.Web.Helpers;
-using System.Web.Mvc;
 using Chem.Models.Search;
-using System.Web;
-using Common.Helpers;
-using System.Text.RegularExpressions;
+using Chem.Services.Services;
 
 namespace Chem.Controllers
 {
@@ -20,7 +11,7 @@ namespace Chem.Controllers
     //[Authorize]
     public class SubstancesController : ApiController
     {
-        SubstancesService _service = new SubstancesService();
+        readonly SubstancesService _service = new SubstancesService(new SubstanceManager(), new ElementManager());
 
         // GET api/values
         public List<SubstancePreview> GetByQuery([FromUri] string query)
@@ -30,7 +21,7 @@ namespace Chem.Controllers
         }
 
         // GET api/values/5
-        public FullSubstanceModel Get(int id)
+        public IFullSubstanceModel Get(int id)
         {
             return _service.GetById(id);
         }

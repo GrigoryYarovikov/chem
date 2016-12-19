@@ -3,14 +3,11 @@ using Chem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Data.Linq;
 using System.Data.Entity;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Chem.Managers
 {
-    public class SubstanceManager
+    public class SubstanceManager : ISubstanceManager
     {
         ChemContext _context;
 
@@ -68,23 +65,26 @@ namespace Chem.Managers
                 return;
 
             var cs = _context.Set<Substance>().FirstOrDefault(x => x.Id == s.Id);
-            if (cs != null)
+
+            if (cs == null)
             {
-                cs.BoilingPoint = s.BoilingPoint;
-                cs.CAS = s.CAS;
-                cs.Categories = s.Categories;
-                cs.Density = s.Density;
-                cs.FlashPoint = s.FlashPoint;
-                cs.Formula = s.Formula;
-                cs.HazardSymbols = s.HazardSymbols;
-                cs.MeltingPoint = s.MeltingPoint;
-                cs.Names = s.Names;
-                cs.RefractiveIndex = s.RefractiveIndex;
-                cs.Scheme = s.Scheme;
-                cs.VapourPressur = s.VapourPressur;
-                cs.WaterSolubility = s.WaterSolubility;
-                _context.SaveChanges();
+                return;
             }
+
+            cs.BoilingPoint = s.BoilingPoint;
+            cs.CAS = s.CAS;
+            cs.Categories = s.Categories;
+            cs.Density = s.Density;
+            cs.FlashPoint = s.FlashPoint;
+            cs.Formula = s.Formula;
+            cs.HazardSymbols = s.HazardSymbols;
+            cs.MeltingPoint = s.MeltingPoint;
+            cs.Names = s.Names;
+            cs.RefractiveIndex = s.RefractiveIndex;
+            cs.Scheme = s.Scheme;
+            cs.VapourPressur = s.VapourPressur;
+            cs.WaterSolubility = s.WaterSolubility;
+            _context.SaveChanges();
         }
 
         public void UpdateAll(Dictionary<int, Substance> dic)

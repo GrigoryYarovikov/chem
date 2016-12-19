@@ -61,6 +61,8 @@
     <Compile Include="ChemContext.cs" />
     <Compile Include="DataManagers\CategoryManager.cs" />
     <Compile Include="DataManagers\ElementManager.cs" />
+    <Compile Include="DataManagers\IElementManager.cs" />
+    <Compile Include="DataManagers\ISubstanceManager.cs" />
     <Compile Include="DataManagers\SubstanceManager.cs" />
     <Compile Include="Migrations\201603081335318_initial.cs" />
     <Compile Include="Migrations\201603081335318_initial.Designer.cs">

@@ -1,15 +1,12 @@
 ﻿using Chem.DataContext;
 using Chem.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Chem.Managers
 {
-    public class ElementManager
+    public class ElementManager : IElementManager
     {
         ChemContext _context;
         IEnumerable<Element> _elements;
