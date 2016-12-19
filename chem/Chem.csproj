@@ -1028,7 +1028,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>37007</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:37007/</IISUrl>
+          <IISUrl>http://localhost</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
