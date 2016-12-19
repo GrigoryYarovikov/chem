@@ -22,7 +22,7 @@ namespace Chem.Tests.Services
             _stubISubstanceManager = new StubISubstanceManager()
             {
                 GetAll = () => _substances.AsQueryable(),
-                GetByIdInt32 = (int id) => _substances.FirstOrDefault( item => item.Id == id)
+                GetByIdInt32 = id => _substances.FirstOrDefault( item => item.Id == id)
             };
 
             _stubIElementManager = new StubIElementManager()
@@ -36,7 +36,7 @@ namespace Chem.Tests.Services
         [TestMethod]
         public void SubstancesService_CreateNew_Success()
         {
-            _substances = new List<Substance>() {};
+            _substances = new List<Substance>();
             Assert.IsNotNull(_substancesService);
         }
 
@@ -131,62 +131,70 @@ namespace Chem.Tests.Services
         }
 
 
-//        [TestMethod]
-//        public void SubstancesService_GetByQuery_FormulasExcitingElements_Sucess()
-//        {
-//            _substances = new List<Substance>()
-//            {
-//                new Substance()
-//                {
-//                    Id = 1,
-//                    Formula = "O2H3"
-//                },
-//                new Substance()
-//                {
-//                    Id = 2,
-//                    Formula = "H2O"
-//                },
-//                new Substance()
-//                {
-//                    Id = 3,
-//                    Formula = "H3OH"
-//                }
-//            };
-//
-//            _elements = new List<Element>()
-//            {
-//                new Element()
-//                {
-//                    Id = 1,
-//                    Sign = "H"
-//                },
-//                new Element()
-//                {
-//                    Id = 2,
-//                    Sign = "O"
-//                },
-//                new Element()
-//                {
-//                    Id = 2,
-//                    Sign = "C"
-//                }
-//            };
-//
-//            const string baseFormula = "H2O";
-//            const string extendedFormula = "H3OH";
-//            const string foldedFormula = "O2H3";
-//
-//            var model = new Models.Search.QueryModel();
-//
-//            model.q = baseFormula;
-//            var resultByBaseFormula = _substancesService.GetByQuery(model);
-//
-//            model.q = extendedFormula;
-//            var resultByExtendedFormula = _substancesService.GetByQuery(model);
-//
-//            model.q = foldedFormula;
-//            var resultByFoldedFormula = _substancesService.GetByQuery(model);
-//        }
+        [TestMethod]
+        public void SubstancesService_GetByQuery_FormulasExcitingElements_Sucess()
+        {
+            _substances = new List<Substance>()
+            {
+                new Substance()
+                {
+                    Id = 1,
+                    Formula = "O2H3"
+                },
+                new Substance()
+                {
+                    Id = 2,
+                    Formula = "C7H2O"
+                },
+                new Substance()
+                {
+                    Id = 3,
+                    Formula = "H3OH"
+                }
+            };
+
+            _elements = new List<Element>()
+            {
+                new Element()
+                {
+                    Id = 1,
+                    Sign = "H"
+                },
+                new Element()
+                {
+                    Id = 2,
+                    Sign = "O"
+                },
+                new Element()
+                {
+                    Id = 2,
+                    Sign = "C"
+                }
+            };
+
+            const string baseFormula = "H2C7O";
+            const string extendedFormula = "HOHCCCCCCC";
+            const string foldedFormula = "OHCCCHC4";
+
+            var model = new Models.Search.QueryModel();
+
+            model.q = baseFormula;
+            var resultByBaseFormula = _substancesService.GetByQuery(model);
+
+            model.q = extendedFormula;
+            var resultByExtendedFormula = _substancesService.GetByQuery(model);
+
+            model.q = foldedFormula;
+            var resultByFoldedFormula = _substancesService.GetByQuery(model);
+
+            Assert.IsNotNull(resultByBaseFormula.FirstOrDefault());
+            Assert.IsNotNull(resultByExtendedFormula.FirstOrDefault());
+            Assert.IsNotNull(resultByFoldedFormula.FirstOrDefault());
+
+            Assert.IsTrue(Equals(resultByBaseFormula.FirstOrDefault().Id, resultByExtendedFormula.FirstOrDefault().Id));
+            Assert.IsTrue(Equals(resultByBaseFormula.FirstOrDefault().Id, resultByFoldedFormula.FirstOrDefault().Id));
+
+        }
 
         [TestMethod]
         public void SubstancesService_GetByQuery_FormulaNotExsitingElement_EmptyList()
@@ -262,7 +270,7 @@ namespace Chem.Tests.Services
                 }
             };
 
-            var model = new Models.Search.QueryModel {};
+            var model = new Models.Search.QueryModel();
             var result = _substancesService.GetByQuery(model);
 
             Assert.IsTrue(result.Count == 3);
