@@ -17,10 +17,10 @@ namespace Chem.DataContext
         {
         }
 
-        public static ChemContext Create()
-        {
-            return new ChemContext();
-        }
+        //public static ChemContext Create()
+        //{
+        //    return new ChemContext();
+        //}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

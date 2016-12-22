@@ -5,10 +5,10 @@
         public SubstanceName()
         {
         }
-        public SubstanceName(string name)
-        {
-            Value = name;
-        }
+        //public SubstanceName(string name)
+        //{
+        //    Value = name;
+        //}
         public int Id { get; set; }
         public string Value { get; set; }
     }

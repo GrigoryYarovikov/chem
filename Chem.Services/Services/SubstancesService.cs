@@ -6,7 +6,7 @@ using Chem.Models;
 using Chem.Models.Search;
 using Common.Helpers;
 
-namespace Chem.Services.Services
+namespace Chem.Services
 {
     public class SubstancesService : ISubstancesService
     {
@@ -17,6 +17,12 @@ namespace Chem.Services.Services
         {
             _elements = iElementManager;
             _substances = iSubstanceManager;
+        }
+
+        public SubstancesService()
+        {
+            _substances = new SubstanceManager();
+            _elements = new ElementManager();
         }
 
         public IFullSubstanceModel GetById(int id)

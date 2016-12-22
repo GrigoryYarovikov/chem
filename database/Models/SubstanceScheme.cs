@@ -5,10 +5,10 @@
         public SubstanceScheme()
         {
         }
-        public SubstanceScheme(string scheme)
-        {
-            Value = scheme;
-        }
+        //public SubstanceScheme(string scheme)
+        //{
+        //    Value = scheme;
+        //}
         public int Id { get; set; }
         public string Value { get; set; }
     }

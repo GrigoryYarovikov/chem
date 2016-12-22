@@ -2,7 +2,7 @@
 using Chem.Managers;
 using Chem.Models.Search;
 
-namespace Chem.Services.Services
+namespace Chem.Services
 {
     public interface ISubstancesService
     {

@@ -7,7 +7,7 @@ using System.Text;
 using CsQuery;
 using Common.Helpers;
 
-namespace Chem
+namespace Chem.Services
 {
     public class LoadPageService
     {

@@ -6,9 +6,9 @@ namespace Chem.Managers
 {
     public interface IElementManager
     {
-        DbContext GetContext();
-        void AddMany(IEnumerable<Element> elements);
+       // DbContext GetContext();
+        //void AddMany(IEnumerable<Element> elements);
         IEnumerable<Element> GetAll();
-        Element GetBySign(string sign);
+        //Element GetBySign(string sign);
     }
 }

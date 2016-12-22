@@ -3,7 +3,7 @@ using System.Web.Http;
 using Chem.Managers;
 using Newtonsoft.Json;
 using Chem.Models.Search;
-using Chem.Services.Services;
+using Chem.Services;
 
 namespace Chem.Controllers
 {
@@ -11,7 +11,7 @@ namespace Chem.Controllers
     //[Authorize]
     public class SubstancesController : ApiController
     {
-        readonly SubstancesService _service = new SubstancesService(new SubstanceManager(), new ElementManager());
+        readonly SubstancesService _service = new SubstancesService();//new SubstanceManager(), new ElementManager());
 
         // GET api/values
         public List<SubstancePreview> GetByQuery([FromUri] string query)
