@@ -562,14 +562,8 @@
         <member name="P:Chem.Models.Fakes.ShimApplicationUser.Constructor">
             <summary>Sets the shim of ApplicationUser.ApplicationUser()</summary>
         </member>
-        <member name="P:Chem.Models.Fakes.ShimApplicationUser.GenerateUserIdentityAsyncUserManagerOfApplicationUserString">
-            <summary>Sets the shim of ApplicationUser.GenerateUserIdentityAsync(UserManager`1&lt;ApplicationUser&gt; manager, String authenticationType)</summary>
-        </member>
         <member name="T:Chem.Models.Fakes.ShimApplicationUser.AllInstances">
             <summary>Define shims for all instances members</summary>
-        </member>
-        <member name="P:Chem.Models.Fakes.ShimApplicationUser.AllInstances.GenerateUserIdentityAsyncUserManagerOfApplicationUserString">
-            <summary>Sets the shim of ApplicationUser.GenerateUserIdentityAsync(UserManager`1&lt;ApplicationUser&gt; manager, String authenticationType)</summary>
         </member>
         <member name="T:Chem.Models.Fakes.ShimCategory">
             <summary>Shim type of Chem.Models.Category</summary>
