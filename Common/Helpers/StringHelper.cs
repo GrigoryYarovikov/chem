@@ -20,30 +20,30 @@ namespace Common.Helpers
             return i;
         }
 
-        static public string CutStar(this string s)
-        {
-            return s.Trim().Trim('*');;
-        }
+        //static public string CutStar(this string s)
+        //{
+        //    return s.Trim().Trim('*');;
+        //}
 
-        static public double ToMassNumber(this string s)
-        {
-            var i = .0;
-            Double.TryParse(s.CleanNumberString(), out i);
-            return i;
-        }
+        //static public double ToMassNumber(this string s)
+        //{
+        //    var i = .0;
+        //    Double.TryParse(s.CleanNumberString(), out i);
+        //    return i;
+        //}
 
-        static public string CleanNumberString(this string s)
-        {
-            var cArr = s.Select(x =>
-            {
-                if (x >= '0' && x <= '9' || x == ',')
-                    return x;
-                if (x == '.')
-                    return ',';
-                return ' ';
-            }).Where(x => x != ' ').ToArray();
-            return new String(cArr);
-        }
+        //static public string CleanNumberString(this string s)
+        //{
+        //    var cArr = s.Select(x =>
+        //    {
+        //        if (x >= '0' && x <= '9' || x == ',')
+        //            return x;
+        //        if (x == '.')
+        //            return ',';
+        //        return ' ';
+        //    }).Where(x => x != ' ').ToArray();
+        //    return new String(cArr);
+        //}
 
         static public bool HasValue(this string s)
         {

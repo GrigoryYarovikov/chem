@@ -1,15 +1,13 @@
 ﻿using Chem.Models.Search;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Web;
 using CsQuery;
 using Common.Helpers;
 
-namespace Chem
+namespace Chem.Services
 {
     public class LoadPageService
     {

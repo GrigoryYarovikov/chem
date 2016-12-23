@@ -1,67 +1,93 @@
-﻿using Chem.Managers;
-using Chem.Models;
-using Chem.Models.Search;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using Chem.Managers;
+using Chem.Models;
+using Chem.Models.Search;
 using Common.Helpers;
 
-namespace Chem
+namespace Chem.Services
 {
-    public class SubstancesService
+    public class SubstancesService : ISubstancesService
     {
-        SubstanceManager _substances;
-        ElementManager _elements;
+        private readonly ISubstanceManager _substances;
+        private readonly IElementManager _elements;
 
-        public SubstancesService() 
+        public SubstancesService(ISubstanceManager iSubstanceManager, IElementManager iElementManager) 
+        {
+            _elements = iElementManager;
+            _substances = iSubstanceManager;
+        }
+
+        public SubstancesService()
         {
             _substances = new SubstanceManager();
             _elements = new ElementManager();
         }
 
-        public FullSubstanceModel GetById(int id)
+        public IFullSubstanceModel GetById(int id)
         {
-            var item = _substances.GetById(id);
-            if (item == null) return null;
+            var result = new FullSubstanceModel();
 
-            var result = new FullSubstanceModel
-            {
-                BoilingPoint = item.BoilingPoint,
-                Categories = GetCategoryList(item.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray(),
-                Density = item.Density,
-                Elements = ParseFormula(item.Formula),
-                FlashPoint = item.FlashPoint,
-                Formula = item.Formula,
-                HazardSymbols = item.HazardSymbols,
-                MeltingPoint = item.MeltingPoint,
-                Names = item.Names.Select(x => x.Value).ToArray(),
-                RefractiveIndex = item.RefractiveIndex,
-                Schemes = item.Scheme.Select(x => x.Value.HtmlDecode()).ToArray(),
-                VapourPressur = item.VapourPressur,
-                WaterSolubility = WaterBoolToStr(item.WaterSolubility)
-            };
+            var item = _substances.GetById(id);
+     
+            if (item == null) return null;
+            
+            if (item.BoilingPoint != null)
+                result.BoilingPoint = item.BoilingPoint;
+            if (item.Categories != null)
+                result.Categories = GetCategoryList(item.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray();
+            if (item.Density != null)
+                result.Density = item.Density;
+            if (item.Formula != null)
+                result.Elements = ParseFormula(item.Formula);
+            if (item.FlashPoint != null)
+                result.FlashPoint = item.FlashPoint;
+            if (item.Formula != null)
+                result.Formula = item.Formula;
+            if (item.HazardSymbols != null)
+                result.HazardSymbols = item.HazardSymbols;
+            if (item.MeltingPoint != null)
+                result.MeltingPoint = item.MeltingPoint;
+            if (item.Names != null)
+                result.Names = item.Names.Select(x => x.Value).ToArray();
+            if (item.RefractiveIndex != null)
+                result.RefractiveIndex = item.RefractiveIndex;
+            if (item.Scheme != null)
+                result.Schemes = item.Scheme.Select(x => x.Value.HtmlDecode()).ToArray();
+            if (item.VapourPressur != null)
+                result.VapourPressur = item.VapourPressur;
+            if (item.WaterSolubility != null)
+                result.WaterSolubility = WaterBoolToStr(item.WaterSolubility);
+            
             return result;
         }
 
         public List<SubstancePreview> GetByQuery(QueryModel query)
         {
-            var elements = _elements.GetAll().ToList();
             var qToDb = _substances.GetAll();
 
             var name = "";
             qToDb = BuildQuery(qToDb, query, out name);
             var list = qToDb.Take(100).ToList();
             name = name.ToLower();
-            var result = list.Select(x => new SubstancePreview 
+            var result = list.Select(x => 
             {
-                Name = x.Names.FirstOrDefault(n => n.Value.ToLower().Contains(name))?.Value,
-                Formula = x.Formula,
-                Categories = GetCategoryList(x.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray(),
-                Synonyms = x.Names.Select(n => n.Value).Take(12).ToArray(),
-                Scheme = x.Scheme.Select(s => s.Value.HtmlDecode()).FirstOrDefault(),
-                Id = x.Id
-
+                var substance = new SubstancePreview();
+                if (x.Names != null)
+                {
+                    var substanceName = x.Names.FirstOrDefault(n => n.Value.ToLower().Contains(name));
+                    substance.Name = substanceName == null ? null : substanceName.Value;
+                    substance.Synonyms = x.Names.Select(n => n.Value).Take(12).ToArray();                    
+                }
+                if (x.Formula != null)
+                    substance.Formula = x.Formula;
+                if (x.Categories != null)
+                    substance.Categories = GetCategoryList(x.Categories).OrderBy(c => c.Id).Select(c => c.Name).Distinct().ToArray();
+                if (x.Scheme != null)
+                    substance.Scheme = x.Scheme.Select(s => s.Value.HtmlDecode()).FirstOrDefault();
+                substance.Id = x.Id;
+                return substance;
             }).ToList();
             return result;
         }
@@ -107,27 +133,28 @@ namespace Chem
                 return;
             }
 
-            var uuu = s.TakeWhile(x => x.IsNumeric());
-            if (uuu != null && uuu.Any())
+            var dgtArray = s.TakeWhile(x => x.IsNumeric());
+            if (dgtArray != null && dgtArray.Any())
             {
-                var ttt = uuu.Select(x => x.ToString()).Aggregate((s1, s2) => s1 + s2);
-                res += ttt;
-                CombineFormulaVariants(s.Substring(ttt.Length), elements, res);
+                var elemCount = dgtArray.Select(x => x.ToString()).Aggregate((s1, s2) => s1 + s2);
+                res += elemCount;
+                CombineFormulaVariants(s.Substring(elemCount.Length), elements, res);
             }
             else
             {
                 var error = 0;
-                var ttt = s.Substring(0, 1);
-                if (elements.Contains(ttt))
-                    CombineFormulaVariants(s.Substring(1), elements, res + ttt.ToUpper());
+                var elementOneLetter = s.Substring(0, 1);
+                if (elements.Contains(elementOneLetter))
+                    CombineFormulaVariants(s.Substring(1), elements, res + elementOneLetter.ToUpper());
                 else
                     ++error;
 
                 if (s.Length > 1)
                 {
-                    ttt = s.Substring(0, 2);
-                    if (elements.Contains(ttt))
-                        CombineFormulaVariants(s.Substring(2), elements, res + ttt.Substring(0, 1).ToUpper() + ttt.Substring(1));
+                    var elementTwoLetters = s.Substring(0, 2);
+                    if (elements.Contains(elementTwoLetters))
+                        CombineFormulaVariants(s.Substring(2), elements, res
+                            + elementTwoLetters.Substring(0, 1).ToUpper() + elementTwoLetters.Substring(1));
                     else
                         ++error;
                 }

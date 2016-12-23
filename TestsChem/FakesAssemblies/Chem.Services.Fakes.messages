@@ -1,0 +1,5 @@
+D:\Projects\Chem\TestsChem\Fakes\Chem.Services.fakes : warning : Cannot generate shim for Chem.Services.Services.ISubstancesService: type is an interface.
+D:\Projects\Chem\TestsChem\Fakes\Chem.Services.fakes : warning : Cannot generate shim for Chem.Services.Services.SubstancesService+<>c__DisplayClass28: type is not supported because of internal limitations.
+D:\Projects\Chem\TestsChem\Fakes\Chem.Services.fakes : warning : Cannot generate shim for Chem.Services.Services.SubstancesService+<>c__DisplayClass2b: type is not supported because of internal limitations.
+D:\Projects\Chem\TestsChem\Fakes\Chem.Services.fakes : warning : Cannot generate shim for Chem.Services.Services.SubstancesService+<>c__DisplayClass2d: type is not supported because of internal limitations.
+D:\Projects\Chem\TestsChem\Fakes\Chem.Services.fakes : warning : Cannot generate shim for Chem.Services.Services.SubstancesService+<>c__DisplayClassf: type is not supported because of internal limitations.

@@ -1,0 +1,30 @@
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for database.Migrations.initial: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for database.Migrations.categoryFix: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for database.Migrations.Configuration: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType0`2: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType1`3: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType2`3: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType3`4: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType4`2: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType5`11: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType6`3: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType7`12: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType8`4: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousType9`2: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate stub for <>f__AnonymousTypea`2: type is sealed.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for Chem.Managers.IElementManager: type is an interface.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for Chem.Managers.ISubstanceManager: type is an interface.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for Chem.Managers.SubstanceManager+<>c__DisplayClass0: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for database.Migrations.Configuration: type is not visible to exported or assembly(database.Fakes).
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for Chem.Models.ApplicationUser+<GenerateUserIdentityAsync>d__0: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType0`2: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType1`3: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType2`3: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType3`4: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType4`2: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType5`11: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType6`3: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType7`12: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType8`4: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousType9`2: type is not supported because of internal limitations.
+D:\Projects\chem\TestsChem\Fakes\database.fakes : warning : Cannot generate shim for <>f__AnonymousTypea`2: type is not supported because of internal limitations.

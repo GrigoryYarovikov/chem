@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Chem.Models;
+﻿using System.Linq;
 
 namespace Chem.Models.Search
 {
-    public class FullSubstanceModel
+    public class FullSubstanceModel : IFullSubstanceModel
     {
         public string Formula { get; set; }
         public string[] Categories { get; set; }
