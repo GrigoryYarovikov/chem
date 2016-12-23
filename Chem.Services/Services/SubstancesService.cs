@@ -23,6 +23,8 @@ namespace Chem
         public FullSubstanceModel GetById(int id)
         {
             var item = _substances.GetById(id);
+            if (item == null) return null;
+
             var result = new FullSubstanceModel
             {
                 BoilingPoint = item.BoilingPoint,

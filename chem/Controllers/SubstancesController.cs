@@ -32,7 +32,12 @@ namespace Chem.Controllers
         // GET api/values/5
         public FullSubstanceModel Get(int id)
         {
-            return _service.GetById(id);
+            var item = _service.GetById(id);
+            if (item == null)
+            {
+                throw new HttpResponseException(System.Net.HttpStatusCode.NotFound);
+            }
+            return item;
         }
 
         // GET api/values/5
