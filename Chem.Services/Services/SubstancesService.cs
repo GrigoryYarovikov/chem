@@ -30,10 +30,8 @@ namespace Chem.Services
             var result = new FullSubstanceModel();
 
             var item = _substances.GetById(id);
-            if (item == null)
-            {
-                throw new SystemException("Not existing Id!");
-            }
+     
+            if (item == null) return null;
             
             if (item.BoilingPoint != null)
                 result.BoilingPoint = item.BoilingPoint;
