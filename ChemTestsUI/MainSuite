@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="MainPageLoaded.html">MainPageLoaded</a></td></tr>
+<tr><td><a href="Example1.html">Example1</a></td></tr>
+<tr><td><a href="Example2.html">Example2</a></td></tr>
+<tr><td><a href="Example3.html">Example3</a></td></tr>
+<tr><td><a href="Example4.html">Example4</a></td></tr>
+<tr><td><a href="Test1_4-нитрофенол.html">Test1_4-нитрофенол</a></td></tr>
+<tr><td><a href="Test2_Тачигарен.html">Test2_Тачигарен</a></td></tr>
+<tr><td><a href="Test3_Кремнекислый калий.html">Test3_Кремнекислый калий</a></td></tr>
+<tr><td><a href="Test4_α-циклодекстрин.html">Test4_α-циклодекстрин</a></td></tr>
+<tr><td><a href="Test5_Пентахлорид фосфора.html">Test5_Пентахлорид фосфора</a></td></tr>
+<tr><td><a href="Test6_Метилсалицилат.html">Test6_Метилсалицилат</a></td></tr>
+<tr><td><a href="Test7_L-Манноза.html">Test7_L-Манноза</a></td></tr>
+<tr><td><a href="Test8_Бромид железа.html">Test8_Бромид железа(III)</a></td></tr>
+<tr><td><a href="Test9_Гидросульфат магния.html">Test9_Гидросульфат магния</a></td></tr>
+<tr><td><a href="Test10_Трифенилфосфит.html">Test10_Трифенилфосфит</a></td></tr>
+<tr><td><a href="Test2_melting_t_equal_to.html">Test2_melting_t_equal_to</a></td></tr>
+<tr><td><a href="Test2_bolinig_t_equal_to.html">Test2_bolinig_t_equal_to</a></td></tr>
+<tr><td><a href="Test2_flash_t_equal_to.html">Test2_flash_t_equal_to</a></td></tr>
+<tr><td><a href="Test2_destiny_equal-to.html">Test2_destiny_equal-to</a></td></tr>
+<tr><td><a href="Test2_vaporPressire_equal_to.html">Test2_vaporPressire_equal_to</a></td></tr>
+<tr><td><a href="Test2_refractiveIndex_equal_to.html">Test2_refractiveIndex_equal_to</a></td></tr>
+<tr><td><a href="Test2_waterSolubility_equal_to.html">Test2_waterSolubility_equal_to</a></td></tr>
+<tr><td><a href="Test2_boiling_and_melting_t_equal_to.html">Test2_boiling_and_melting_t_equal_to</a></td></tr>
+<tr><td><a href="Test2_melting_t_and_destiny_equal_to.html">Test2_melting_t_and_destiny_equal_to</a></td></tr>
+<tr><td><a href="Test2_boiling_t_and_destiny_equal_to.html">Test2_boiling_t_and_destiny_equal_to</a></td></tr>
+</tbody></table>
+</body>
+</html>

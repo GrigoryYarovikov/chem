@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:37007/" />
+<title>Example2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Example2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=H3CCH2CH2COOH</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3.ng-binding</td>
+	<td>Найдено 13 результатов</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.search_result-table &gt; div.ng-scope &gt; h3.ng-binding</td>
+	<td>exact:1: 3-гидроксибутаналь</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='main']/div/div[2]/div/div[2]/h3</td>
+	<td>exact:2: Масляная кислота</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='main']/div/div[2]/div/div[3]/h3</td>
+	<td>exact:3: 1,4-диоксан</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='main']/div/div[2]/div/div[4]/h3</td>
+	<td>exact:4: Этилацетат</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

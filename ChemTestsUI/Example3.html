@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:37007/" />
+<title>Example3</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Example3</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=C5H10O4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3.ng-binding</td>
+	<td>Найдено 3 результатов</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.search_result-table &gt; div.ng-scope &gt; h3.ng-binding</td>
+	<td>exact:1: трис-метилолацетальдегид</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='main']/div/div[2]/div/div[2]/h3</td>
+	<td>exact:2: D-Дезоксирибоза</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='main']/div/div[2]/div/div[3]/h3</td>
+	<td>exact:3: Дезоксирибопираноза</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
