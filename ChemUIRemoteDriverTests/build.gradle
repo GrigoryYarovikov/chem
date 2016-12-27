@@ -1,0 +1,25 @@
+group 'com.chem'
+version '1.0'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '3.1'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.0.1'
+
+//    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.0.1'
+//    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '3.0.1'
+//    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.0.1'
+//    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.0.1'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
